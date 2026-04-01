@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>AI for Your Role — Module 3</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-left">
+    <svg class="logo" viewBox="0 0 40 40" fill="none" aria-label="KEDAL Solutions">
+      <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
+      <path d="M13 13 L13 27 M13 20 L22 13 M13 20 L22 27" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="28" cy="20" r="4" fill="currentColor" opacity="0.7"/>
+    </svg>
+    <span class="nav-title">AI for Your Role</span>
+    <span class="nav-module-badge">Module 3</span>
+  </div>
+  <div class="nav-right">
+    <div class="track-indicator" id="trackIndicator"></div>
+    <span class="slide-counter" id="slideCounter">1 / 22</span>
+    <button class="theme-btn" data-theme-toggle aria-label="Switch theme">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </div>
+</nav>
+
+<div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+
+<main class="deck" id="deck">
+
+  <!-- SLIDE 1: COVER -->
+  <section class="slide slide-cover active" data-slide="1" data-track="intro">
+    <div class="cover-bg"></div>
+    <div class="cover-content">
+      <p class="cover-eyebrow">AI Business Training — Module 3</p>
+      <h1 class="cover-title">AI for<br><em>Your Role.</em></h1>
+      <p class="cover-sub">Four domain-specific tracks. Real use cases. Prompts you can run today.</p>
+      <div class="cover-meta"><span>Teacher Scott</span><span class="dot">·</span><span>KEDAL Solutions</span></div>
+    </div>
+    <div class="cover-nav"><button class="btn-next" onclick="nextSlide()">Begin <span class="arrow">→</span></button></div>
+  </section>
+
+  <!-- SLIDE 2: TRACK MAP -->
+  <section class="slide" data-slide="2" data-track="intro">
+    <div class="slide-inner">
+      <p class="eyebrow">What's in this module</p>
+      <h2>Four tracks. One module.</h2>
+      <p class="slide-lead">Every track uses the same framework you learned in Modules 1 and 2 — applied to your specific daily work.</p>
+      <div class="track-map">
+        <div class="track-card track-a" onclick="goToSlide(3)">
+          <div class="tc-letter">A</div>
+          <div class="tc-body">
+            <h3>Healthcare Operations</h3>
+            <p>Patient flow, reporting, vendor communication, SOPs, quality documentation</p>
+            <div class="tc-slides">Slides 3–8</div>
+          </div>
+        </div>
+        <div class="track-card track-b" onclick="goToSlide(9)">
+          <div class="tc-letter">B</div>
+          <div class="tc-body">
+            <h3>Staffing &amp; Workforce</h3>
+            <p>Job postings, candidate screening, onboarding, credentialing, retention</p>
+            <div class="tc-slides">Slides 9–14</div>
+          </div>
+        </div>
+        <div class="track-card track-c" onclick="goToSlide(15)">
+          <div class="tc-letter">C</div>
+          <div class="tc-body">
+            <h3>Compliance &amp; Risk</h3>
+            <p>Policy writing, audit prep, incident response, training content, contract review</p>
+            <div class="tc-slides">Slides 15–20</div>
+          </div>
+        </div>
+        <div class="track-card track-d" onclick="goToSlide(21)">
+          <div class="tc-letter">D</div>
+          <div class="tc-body">
+            <h3>Leadership &amp; Strategy</h3>
+            <p>Strategic communications, board prep, competitive intelligence, change management, decision framing</p>
+            <div class="tc-slides">Slides 21–26</div>
+          </div>
+        </div>
+      </div>
+      <p class="slide-note">Click any track to jump directly to it. Or go straight through all four.</p>
+    </div>
+  </section>
+
+  <!-- TRACK A DIVIDER -->
+  <section class="slide slide-divider divider-a" data-slide="3" data-track="A">
+    <div class="divider-content">
+      <div class="div-letter">A</div>
+      <div>
+        <p class="div-eyebrow">Track A</p>
+        <h2 class="div-title">Healthcare Operations</h2>
+        <p class="div-sub">Making the machinery run — faster, with less friction.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- A1: SCHEDULING -->
+  <section class="slide" data-slide="4" data-track="A">
+    <div class="slide-inner">
+      <div class="use-case-header uc-a">
+        <span class="uc-badge">A · 01</span>
+        <div><p class="eyebrow">Healthcare Operations</p><h2>Patient Flow &amp; No-Show Reduction</h2></div>
+      </div>
+      <div class="uc-pain">
+        <span class="pain-label">The pain:</span>
+        An 18% no-show rate costs a 12-provider practice $200K–$400K in annual lost revenue. The fix is consistent, personalized communication — which no one has time to write for every patient.
+      </div>
+      <div class="two-col">
+        <div>
+          <h3 class="section-h3">The prompt</h3>
+          <div class="prompt-box">
+"I run a 12-provider outpatient family medicine practice. Our no-show rate is 18%, highest on Monday mornings and Friday afternoons. Draft a 3-part patient reminder sequence (72 hours, 24 hours, 2 hours before appointment) that is warm, specific, and includes an easy reschedule path. Also suggest 3 scheduling policy changes based on best practices to reduce no-shows."
+          </div>
+        </div>
+        <div>
+          <h3 class="section-h3">What you get</h3>
+          <ul class="output-list">
+            <li>3 ready-to-deploy patient reminder templates</li>
+            <li>Evidence-based scheduling policy recommendations</li>
+            <li>Customizable for SMS, email, or phone script</li>
+          </ul>
+          <div class="time-save">
+            <span class="ts-before">Before: 3–4 hrs to draft + review</span>
+            <span class="ts-arrow">→</span>
+            <span class="ts-after">After: 8 min</span>
+          </div>
+          <div class="tool-tease mt">
+            <span class="tease-label">Tools:</span>
+            <span class="tool-tag">ChatGPT GPT-4o</span>
+            <span class="tool-tag">Claude</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- A2: REPORTING -->
+  <section class="slide" data-slide="5" data-track="A">
+    <div class="slide-inner">
+      <div class="use-case-header uc-a">
+        <span class="uc-badge">A · 02</span>
+        <div><p class="eyebrow">Healthcare Operations</p><h2>Department Reporting &amp; Executive Communication</h2></div>
+      </div>
+      <div class="uc-pain">
+        <span class="pain-label">The pain:</span>
+        The same metrics get repackaged into leadership summaries every month. The data changes; the structure and the writing effort don't.
+      </div>
+      <div class="two-col">
+        <div>
+          <h3 class="section-h3">The prompt</h3>
+          <div class="prompt-box">
+"Write a 3-paragraph executive summary for hospital leadership using these metrics: ED wait time avg 47 min (target 40), patient satisfaction 82% (target 85%), supply costs $1.2M (budget $1.1M), staff overtime 12% (target 8%). Explain variances, identify root causes where I specify them, outline 2–3 corrective actions. Tone: direct, data-driven, not defensive."
+          </div>
+          <div class="prompt-followup">
+            <span class="fu-label">Follow-up:</span>
+            "Rewrite the supply cost section — add that Q1 had an unplanned sterile supply backorder requiring spot purchases."
+          </div>
+        </div>
+        <div>
+          <h3 class="section-h3">What you get</h3>
+          <ul class="output-list">
+            <li>Submit-ready executive summary</li>
+            <li>Variance explanations in leadership language</li>
+            <li>Corrective action framing that doesn't sound defensive</li>
+          </ul>
+          <div class="time-save">
+            <span class="ts-before">Before: 45–60 min</span>
+            <span class="ts-arrow">→</span>
+            <span class="ts-after">After: 5 min</span>
+          </div>
+          <div class="tool-tease mt">
+            <span class="tease-label">Tools:</span>
+            <span class="tool-tag">ChatGPT GPT-4o</span>
+            <span class="tool-tag">Claude</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- A3: VENDOR -->
+  <section class="slide" data-slide="6" data-track="A">
+    <div class="slide-inner">
+      <div class="use-case-header uc-a">
+        <span class="uc-badge">A · 03</span>
+        <div><p class="eyebrow">Healthcare Operations</p><h2>Vendor Performance &amp; Contract Communication</h2></div>
+      </div>
+      <div class="uc-pain">
+        <span class="pain-label">The pain:</span>
+        Vendor performance issues go undocumented because writing the letter takes too long. By the time it gets written, the relationship has deteriorated further.
+      </div>
+      <div class="two-col">
+        <div>
+          <h3 class="section-h3">The prompt</h3>
+          <div class="prompt-box">
+"Draft a professional letter to our medical supply vendor. Their on-time delivery rate dropped to 71% (contract requires 95%). Include: specific data points, operational impact (2 procedure delays, 1 supply substitution incident), a formal 30-day cure period request, and consequences if performance doesn't improve. Tone: firm but professional, not adversarial."
+          </div>
+        </div>
+        <div>
+          <h3 class="section-h3">What you get</h3>
+          <ul class="output-list">
+            <li>Vendor performance letter ready for legal review</li>
+            <li>Creates a documented paper trail</li>
+            <li>Professional tone that protects the relationship while holding the vendor accountable</li>
+          </ul>
+          <div class="time-save">
+            <span class="ts-before">Before: 1–2 hrs + legal review</span>
+            <span class="ts-arrow">→</span>
+            <span class="ts-after">After: 3 min to draft</span>
+          </div>
+          <div class="uc-insight">
+            <span class="insight-label">Key insight:</span>
+            AI doesn't replace legal review — it eliminates the drafting time so legal only reviews, not writes.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- A4: SOP -->
+  <section class="slide" data-slide="7" data-track="A">
+    <div class="slide-inner">
+      <div class="use-case-header uc-a">
+        <span class="uc-badge">A · 04</span>
+        <div><p class="eyebrow">Healthcare Operations</p><h2>SOP Building via AI Interview</h2></div>
+      </div>
+      <div class="uc-pain">
+        <span class="pain-label">The pain:</span>
+        Institutional knowledge lives in people's heads. SOPs get written once and never updated. When the person who knows the process leaves, the process breaks.
+      </div>
+      <div class="two-col">
+        <div>
+          <h3 class="section-h3">The prompt</h3>
+          <div class="prompt-box">
+"Interview me and create an SOP for our patient discharge process. Ask me questions one at a time about each step, who is responsible, documentation required, and what can go wrong. After I answer all questions, write the full SOP: title, purpose, scope, responsible parties, step-by-step procedure, documentation requirements, and revision history."
+          </div>
+        </div>
+        <div>
+          <h3 class="section-h3">Why this approach works</h3>
+          <div class="insight-card">
+            <p>AI as an <strong>interviewer</strong> extracts institutional knowledge from the person who actually does the work — not a generic template that gets adapted into something wrong.</p>
+            <p>The person being interviewed doesn't need to be a writer. They just need to answer questions. The SOP writes itself from the conversation.</p>
+          </div>
+          <div class="uc-insight">
+            <span class="insight-label">Variation:</span>
+            Use this for any process you want documented: credentialing, billing, discharge, scheduling, onboarding.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- A5: QUALITY -->
+  <section class="slide" data-slide="8" data-track="A">
+    <div class="slide-inner">
+      <div class="use-case-header uc-a">
+        <span class="uc-badge">A · 05</span>
+        <div><p class="eyebrow">Healthcare Operations</p><h2>Quality &amp; Patient Safety Documentation</h2></div>
+      </div>
+      <div class="uc-pain">
+        <span class="pain-label">The pain:</span>
+        Incident reports get written under pressure, by people who aren't trained writers, with legal exposure on every word.
+      </div>
+      <div class="two-col">
+        <div>
+          <h3 class="section-h3">The prompt</h3>
+          <div class="prompt-box">
+"Write a structured incident report for a medication near-miss. Details: nurse prepared heparin 10,000 units instead of 1,000 units due to look-alike packaging. Error caught by second nurse during two-person verification. No patient harm. Write in SBAR format and include 3 immediate corrective actions and 2 systemic recommendations."
+          </div>
+        </div>
+        <div>
+          <h3 class="section-h3">What you get</h3>
+          <ul class="output-list">
+            <li>Complete SBAR incident report</li>
+            <li>Immediate and systemic corrective actions included</li>
+            <li>Quality committee-ready documentation</li>
+            <li>Consistent format regardless of who's writing it</li>
+          </ul>
+          <div class="track-nav-row">
+            <button class="track-nav-btn" onclick="goToSlide(9)">Next: Track B — Staffing &amp; Workforce →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRACK B DIVIDER -->
+  <section class="slide slide-divider divider-b" data-slide="9" data-track="B">
+    <div class="divider-content">
+      <div class="div-letter">B</div>
+      <div>
+        <p class="div-eyebrow">Track B</p>
+        <h2 class="div-title">Staffing &amp; Workforce</h2>
+        <p class="div-sub">Getting the right people in the right seats — with less administrative overhead.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- B1: JOB POSTING -->
+  <section class="slide" data-slide="10" data-track="B">
+    <div class="slide-inner">
+      <div class="use-case-header uc-b">
+        <span class="uc-badge uc-badge-b">B · 01</span>
+        <div><p class="eyebrow">Staffing &amp; Workforce</p><h2>Full-Cycle Recruitment Content</h2></div>
+      </div>
+      <div class="uc-pain">
+        <span class="pain-label">The pain:</span>
+        Every open role needs a job description, an Indeed posting, recruiter outreach copy, and social content. Multiply that by 20 open roles and it's a full-time job just to write the posts.
+      </div>
+      <div class="two-col">
+        <div>
+          <h3 class="section-h3">The prompt</h3>
+          <div class="prompt-box">
+"Create a recruitment content package for a Travel ICU RN opening at a Level II Trauma Center in Atlanta, GA. Include: (1) detailed job description, (2) 150-word Indeed/LinkedIn posting, (3) 3-sentence recruiter outreach for cold LinkedIn reach, (4) two social captions — one LinkedIn, one Facebook. Contract: 13 weeks, $2,800/week all-in, housing stipend. Start May 1."
+          </div>
+        </div>
+        <div>
+          <h3 class="section-h3">What you get</h3>
+          <ul class="output-list">
+            <li>4 pieces of channel-specific recruitment content</li>
+            <li>Tone calibrated per platform</li>
+            <li>Ready to post — no copywriter needed</li>
+          </ul>
+          <div class="time-save">
+            <span class="ts-before">Before: 2+ hrs per role</span>
+            <span class="ts-arrow">→</span>
+            <span class="ts-after">After: 4 min</span>
+          </div>
+          <div class="uc-insight">
+            <span class="insight-label">Scale it:</span>
+            With 20 open roles, this saves 40+ hours of recruitment content writing per month.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- B2: SCREENING -->
+  <section class="slide" data-slide="11" data-track="B">
+    <div class="slide-inner">
+      <div class="use-case-header uc-b">
+        <span class="uc-badge uc-badge-b">B · 02</span>
+        <div><p class="eyebrow">Staffing &amp; Workforce</p><h2>Structured Screening &amp; Interview Guides</h2></div>
+      </div>
+      <div class="uc-pain">
+        <span class="pain-label">The pain:</span>
+        Interview quality is inconsistent. Different managers ask different questions. Scoring is subjective. The result is a hiring process that can't be defended.
+      </div>
+      <div class="two-col">
+        <div>
+          <h3 class="section-h3">The prompt</h3>
+          <div class="prompt-box">
+"I'm hiring a Director of Nursing at a 120-bed SNF. Ideal candidate: 5+ yrs SNF leadership, survey readiness, staff retention record, MDS knowledge. Create: (1) 10-question resume screening checklist with red flags and green flags per criterion, (2) structured interview guide with 8 behavioral questions tied to each competency, (3) a 1–5 scoring rubric for each question. Format as a hiring manager's tool."
+          </div>
+        </div>
+        <div>
+          <h3 class="section-h3">What you get</h3>
+          <ul class="output-list">
+            <li>Consistent, defensible screening criteria</li>
+            <li>Behavioral questions that surface real evidence</li>
+            <li>Scoring rubric that removes subjectivity</li>
+            <li>Legally cleaner hiring process</li>
+          </ul>
+          <div class="tool-tease mt">
+            <span class="tease-label">Tools:</span>
+            <span class="tool-tag">ChatGPT GPT-4o</span>
+            <span class="tool-tag">Claude</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- B3: ONBOARDING -->
+  <section class="slide" data-slide="12" data-track="B">
+    <div class="slide-inner">
+      <div class="use-case-header uc-b">
+        <span class="uc-badge uc-badge-b">B · 03</span>
+        <div><p class="eyebrow">Staffing &amp; Workforce</p><h2>Onboarding Plans &amp; Welcome Materials</h2></div>
+      </div>
+      <div class="uc-pain">
+        <span class="pain-label">The pain:</span>
+        Every new hire gets a slightly different onboarding experience. The quality of the first 30 days depends entirely on who's managing it.
+      </div>
+      <div class="two-col">
+        <div>
+          <h3 class="section-h3">The prompt</h3>
+          <div class="prompt-box">
+"Create a 30-60-90 day onboarding plan for a newly hired Clinical Nurse Manager on a 28-bed med-surg unit. For each phase: learning objectives, key relationships to build, operational responsibilities to assume, and a success metric. Also write the pre-start welcome letter — warm, role-specific, focused on setting them up to succeed."
+          </div>
+        </div>
+        <div>
+          <h3 class="section-h3">What you get</h3>
+          <ul class="output-list">
+            <li>Structured 90-day onboarding roadmap</li>
+            <li>Success metrics per phase — not just tasks</li>
+            <li>Welcome letter that starts the relationship right</li>
+            <li>Consistent experience regardless of manager</li>
+          </ul>
+          <div class="uc-insight">
+            <span class="insight-label">Variation:</span>
+            Build one template per role family — RN, manager, coordinator, CNA — and customize per hire in minutes.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- B4: CREDENTIALING -->
+  <section class="slide" data-slide="13" data-track="B">
+    <div class="slide-inner">
+      <div class="use-case-header uc-b">
+        <span class="uc-badge uc-badge-b">B · 04</span>
+        <div><p class="eyebrow">Staffing &amp; Workforce</p><h2>Credentialing Communication System</h2></div>
+      </div>
+      <div class="uc-pain">
+        <span class="pain-label">The pain:</span>
+        Expired licenses and lapsed certifications are a compliance crisis waiting to happen. Most organizations catch them too late because the reminder system is manual and inconsistent.
+      </div>
+      <div class="two-col">
+        <div>
+          <h3 class="section-h3">The prompt</h3>
+          <div class="prompt-box">
+"Create a credentialing compliance communication system for a home health agency with 45 clinical staff. Design: (1) 90-day advance notice email template for expiring credentials, (2) 30-day final notice with escalation, (3) manager notification template for credentials expiring within 14 days, (4) staff acknowledgment form. All with deadline date placeholders."
+          </div>
+        </div>
+        <div>
+          <h3 class="section-h3">What you get</h3>
+          <ul class="output-list">
+            <li>Complete 4-piece credentialing communication system</li>
+            <li>Automated-ready — drop into your HR system</li>
+            <li>Manager escalation path built in</li>
+            <li>Paper trail via acknowledgment form</li>
+          </ul>
+          <div class="time-save">
+            <span class="ts-before">Before: Days to build, ad-hoc execution</span>
+            <span class="ts-arrow">→</span>
+            <span class="ts-after">After: 10 min to build, systematic execution</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- B5: RETENTION -->
+  <section class="slide" data-slide="14" data-track="B">
+    <div class="slide-inner">
+      <div class="use-case-header uc-b">
+        <span class="uc-badge uc-badge-b">B · 05</span>
+        <div><p class="eyebrow">Staffing &amp; Workforce</p><h2>Stay Interviews &amp; Retention Conversations</h2></div>
+      </div>
+      <div class="uc-pain">
+        <span class="pain-label">The pain:</span>
+        Healthcare turnover is 19–26% annually. Most managers know who might leave — but don't have the conversation because they don't know how to structure it.
+      </div>
+      <div class="two-col">
+        <div>
+          <h3 class="section-h3">The prompt</h3>
+          <div class="prompt-box">
+"I'm a nursing unit manager preparing stay interviews with 6 nurses at varying flight risk levels. Create: (1) stay interview guide with 8 open-ended questions uncovering what's keeping them and what might make them leave, (2) one-page manager prep sheet for before, during, and after, (3) follow-up action template to document commitments made. Tone: genuinely caring, not corporate HR-speak."
+          </div>
+        </div>
+        <div>
+          <h3 class="section-h3">What you get</h3>
+          <ul class="output-list">
+            <li>Structured conversation guide managers actually use</li>
+            <li>Questions that uncover real retention drivers</li>
+            <li>Commitment documentation for accountability</li>
+            <li>Consistent approach across all managers</li>
+          </ul>
+          <div class="track-nav-row">
+            <button class="track-nav-btn track-nav-c" onclick="goToSlide(15)">Next: Track C — Compliance &amp; Risk →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRACK C DIVIDER -->
+  <section class="slide slide-divider divider-c" data-slide="15" data-track="C">
+    <div class="divider-content">
+      <div class="div-letter">C</div>
+      <div>
+        <p class="div-eyebrow">Track C</p>
+        <h2 class="div-title">Compliance &amp; Risk</h2>
+        <p class="div-sub">Staying ahead of regulations — without drowning in documentation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- C1: POLICY -->
+  <section class="slide" data-slide="16" data-track="C">
+    <div class="slide-inner">
+      <div class="use-case-header uc-c">
+        <span class="uc-badge uc-badge-c">C · 01</span>
+        <div><p class="eyebrow">Compliance &amp; Risk</p><h2>AI Governance Policy Development</h2></div>
+      </div>
+      <div class="uc-pain">
+        <span class="pain-label">The pain:</span>
+        Your staff is already using AI tools. Most organizations have no policy governing how. That's a HIPAA incident waiting to happen.
+      </div>
+      <div class="two-col">
+        <div>
+          <h3 class="section-h3">The prompt</h3>
+          <div class="prompt-box">
+"Draft a policy for AI tool use by clinical and administrative staff in a HIPAA-covered organization. Address: (1) approved tool tiers, (2) data classification — what can/cannot be entered into each tier, (3) staff training requirements, (4) incident reporting for AI-related privacy events, (5) governance and annual review. Format: standard P&P with purpose, scope, policy statement, procedures, definitions, references."
+          </div>
+        </div>
+        <div>
+          <h3 class="section-h3">Why this matters right now</h3>
+          <div class="insight-card insight-urgent">
+            <p><strong>This is the #1 most-needed document in healthcare compliance in 2026.</strong> Most organizations have no AI governance policy. Your staff is using ChatGPT free tier. PHI is being entered into consumer tools. This policy closes that gap.</p>
+          </div>
+          <div class="tool-tease mt">
+            <span class="tease-label">Tools:</span>
+            <span class="tool-tag">Claude</span>
+            <span class="tool-tag">ChatGPT Enterprise</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- C2: AUDIT -->
+  <section class="slide" data-slide="17" data-track="C">
+    <div class="slide-inner">
+      <div class="use-case-header uc-c">
+        <span class="uc-badge uc-badge-c">C · 02</span>
+        <div><p class="eyebrow">Compliance &amp; Risk</p><h2>Audit Preparation &amp; Survey Readiness</h2></div>
+      </div>
+      <div class="uc-pain">
+        <span class="pain-label">The pain:</span>
+        Audit prep is always a fire drill. Documents get pulled, binders get built, staff get coached — all in the last 72 hours, every single time.
+      </div>
+      <div class="two-col">
+        <div>
+          <h3 class="section-h3">The prompt</h3>
+          <div class="prompt-box">
+"Joint Commission survey in 6 weeks. I manage infection prevention. Create: (1) 30-item pre-survey readiness checklist by the top 10 most common Joint Commission IP findings, (2) documentation required for each finding category, (3) one-page staff briefing on what to expect during the survey and how to respond to surveyor questions. Keep it practical — this goes to front-line nursing staff."
+          </div>
+        </div>
+        <div>
+          <h3 class="section-h3">What you get</h3>
+          <ul class="output-list">
+            <li>Readiness checklist organized by high-risk finding categories</li>
+            <li>Documentation inventory per category</li>
+            <li>Staff briefing in plain language</li>
+            <li>Audit prep that starts weeks earlier, not days</li>
+          </ul>
+          <div class="uc-insight">
+            <span class="insight-label">Pattern shift:</span>
+            Audit readiness becomes continuous, not a fire drill. Run this prompt quarterly.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- C3: INCIDENT -->
+  <section class="slide" data-slide="18" data-track="C">
+    <div class="slide-inner">
+      <div class="use-case-header uc-c">
+        <span class="uc-badge uc-badge-c">C · 03</span>
+        <div><p class="eyebrow">Compliance &amp; Risk</p><h2>HIPAA Breach Documentation &amp; Response</h2></div>
+      </div>
+      <div class="uc-pain">
+        <span class="pain-label">The pain:</span>
+        When a privacy incident happens, documentation needs to be done fast, correctly, and in a way that protects the organization — under pressure, with legal exposure.
+      </div>
+      <div class="two-col">
+        <div>
+          <h3 class="section-h3">The prompt</h3>
+          <div class="prompt-box">
+"Help document a potential HIPAA breach: staff member sent a patient's lab results to the wrong patient's MyChart. Discovered 4 hours later. No highly sensitive info (mental health, substance abuse, HIV). Draft: (1) initial incident documentation using the 4-factor risk assessment, (2) determination memo on breach notification threshold, (3) patient notification letter if required."
+          </div>
+        </div>
+        <div>
+          <h3 class="section-h3">What you get</h3>
+          <ul class="output-list">
+            <li>Structured 4-factor risk assessment</li>
+            <li>Breach vs. no-breach determination memo</li>
+            <li>OCR-compliant patient notification letter</li>
+            <li>Documentation that protects the organization</li>
+          </ul>
+          <div class="uc-insight">
+            <span class="insight-label">Critical note:</span>
+            Always have legal and privacy counsel review before sending breach notifications. AI drafts — counsel decides.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- C4: TRAINING -->
+  <section class="slide" data-slide="19" data-track="C">
+    <div class="slide-inner">
+      <div class="use-case-header uc-c">
+        <span class="uc-badge uc-badge-c">C · 04</span>
+        <div><p class="eyebrow">Compliance &amp; Risk</p><h2>Training Content That Doesn't Collect Dust</h2></div>
+      </div>
+      <div class="uc-pain">
+        <span class="pain-label">The pain:</span>
+        Vendor-purchased compliance training is expensive, generic, and immediately stale. Internal development takes weeks. Most of it gets clicked through without being read.
+      </div>
+      <div class="two-col">
+        <div>
+          <h3 class="section-h3">The prompt</h3>
+          <div class="prompt-box">
+"Create a 20-minute HIPAA refresher for front-desk staff. Include: (1) 3 real-world scenarios showing correct vs. incorrect handling of patient info at check-in — make them feel real, not textbook, (2) 10-question quiz with answer key and rationale, (3) 5 key takeaways formatted as a wallet card, (4) a sign-off sheet. Include the awkward moments staff actually face — family in the room, phone calls claiming to be the doctor, wrong fax numbers."
+          </div>
+        </div>
+        <div>
+          <h3 class="section-h3">What you get</h3>
+          <ul class="output-list">
+            <li>Complete training module — LMS-ready</li>
+            <li>Scenario-based, not lecture-based</li>
+            <li>Quiz with rationale — not just right/wrong</li>
+            <li>Wallet card staff will actually keep</li>
+          </ul>
+          <div class="time-save">
+            <span class="ts-before">Before: Vendor cost $5K–$20K/yr or weeks of internal dev</span>
+            <span class="ts-arrow">→</span>
+            <span class="ts-after">After: 15 min to build, fully customized</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- C5: CONTRACT -->
+  <section class="slide" data-slide="20" data-track="C">
+    <div class="slide-inner">
+      <div class="use-case-header uc-c">
+        <span class="uc-badge uc-badge-c">C · 05</span>
+        <div><p class="eyebrow">Compliance &amp; Risk</p><h2>BAA &amp; Contract Pre-Review</h2></div>
+      </div>
+      <div class="uc-pain">
+        <span class="pain-label">The pain:</span>
+        Every vendor agreement needs compliance review. Outside counsel at $300–$500/hour makes thorough review cost-prohibitive. Things get signed without being read.
+      </div>
+      <div class="two-col">
+        <div>
+          <h3 class="section-h3">The prompt</h3>
+          <div class="prompt-box">
+"Review this Business Associate Agreement and identify: (1) missing provisions required under HIPAA 45 CFR 164.504(e), (2) provisions creating unusual risk for our org as the covered entity, (3) breach notification timeline compliance (HIPAA requires 60 days), (4) indemnification gaps to push back on, (5) 5 specific questions for legal counsel before signing. [Paste BAA text]"
+          </div>
+        </div>
+        <div>
+          <h3 class="section-h3">What you get</h3>
+          <ul class="output-list">
+            <li>Pre-legal review memo focused on real risk</li>
+            <li>Attorney time focused on reviewing, not reading</li>
+            <li>Legal cost per contract down 60–80%</li>
+            <li>Nothing gets signed without being understood</li>
+          </ul>
+          <div class="track-nav-row">
+            <button class="track-nav-btn track-nav-d" onclick="goToSlide(21)">Next: Track D — Leadership &amp; Strategy →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRACK D DIVIDER -->
+  <section class="slide slide-divider divider-d" data-slide="21" data-track="D">
+    <div class="divider-content">
+      <div class="div-letter">D</div>
+      <div>
+        <p class="div-eyebrow">Track D</p>
+        <h2 class="div-title">Leadership &amp; Strategy</h2>
+        <p class="div-sub">Getting your thinking time back — and making decisions with more clarity.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- D1: STRATEGIC COMMS -->
+  <section class="slide" data-slide="22" data-track="D">
+    <div class="slide-inner">
+      <div class="use-case-header uc-d">
+        <span class="uc-badge uc-badge-d">D · 01</span>
+        <div><p class="eyebrow">Leadership &amp; Strategy</p><h2>Multi-Audience Strategic Communication</h2></div>
+      </div>
+      <div class="uc-pain">
+        <span class="pain-label">The pain:</span>
+        The same message needs to land differently for the board, for all-staff, for the community, and for department heads. Leaders write four versions. Or they write one and it lands wrong in three rooms.
+      </div>
+      <div class="two-col">
+        <div>
+          <h3 class="section-h3">The prompt</h3>
+          <div class="prompt-box">
+"We're consolidating two of our three emergency departments into a new regional emergency center — cost-driven but also improves clinical outcomes through volume concentration. Draft: (1) board memo — formal, financial/strategic framing, 1 page, (2) all-staff email — honest, empathetic, addresses job security directly, (3) community statement for media — accessible, patient care focused, (4) department head talking points for team conversations."
+          </div>
+        </div>
+        <div>
+          <h3 class="section-h3">What you get</h3>
+          <ul class="output-list">
+            <li>4 audience-specific communications from one prompt</li>
+            <li>Consistent facts, differentiated tone</li>
+            <li>Job security addressed — not avoided</li>
+            <li>Ready for comms team review, not rewrite</li>
+          </ul>
+          <div class="time-save">
+            <span class="ts-before">Before: Half a day across 4 drafts</span>
+            <span class="ts-arrow">→</span>
+            <span class="ts-after">After: 20 min to draft all four</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- D2: BOARD PREP -->
+  <section class="slide" data-slide="23" data-track="D">
+    <div class="slide-inner">
+      <div class="use-case-header uc-d">
+        <span class="uc-badge uc-badge-d">D · 02</span>
+        <div><p class="eyebrow">Leadership &amp; Strategy</p><h2>Board &amp; Leadership Meeting Prep</h2></div>
+      </div>
+      <div class="uc-pain">
+        <span class="pain-label">The pain:</span>
+        Board prep consumes a disproportionate amount of leadership time. The raw data exists — turning it into a clear narrative is the work.
+      </div>
+      <div class="two-col">
+        <div>
+          <h3 class="section-h3">The prompt</h3>
+          <div class="prompt-box">
+"Board meeting in 48 hours. Using this Q1 financial summary [paste data], create: (1) 5-bullet executive summary — what's working, what isn't, why, (2) 3 questions the board is likely to ask + my recommended responses, (3) a one-page narrative I can walk through in 10 minutes, (4) the single most important decision I need from the board today, framed as a clear decision question."
+          </div>
+        </div>
+        <div>
+          <h3 class="section-h3">What you get</h3>
+          <ul class="output-list">
+            <li>Full board meeting prep package in under 20 min</li>
+            <li>Anticipated questions with prepared answers</li>
+            <li>A clear decision question — not a status report</li>
+            <li>Narrative that tells a story, not just recites data</li>
+          </ul>
+          <div class="uc-insight">
+            <span class="insight-label">The shift:</span>
+            Leaders spend less time producing the package and more time thinking about what they actually want the board to decide.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- D3: COMPETITIVE INTEL -->
+  <section class="slide" data-slide="24" data-track="D">
+    <div class="slide-inner">
+      <div class="use-case-header uc-d">
+        <span class="uc-badge uc-badge-d">D · 03</span>
+        <div><p class="eyebrow">Leadership &amp; Strategy</p><h2>Competitive Intelligence &amp; Market Positioning</h2></div>
+      </div>
+      <div class="uc-pain">
+        <span class="pain-label">The pain:</span>
+        Strategic decisions get made on intuition because real market research takes time no one has. The competitive landscape changes faster than the last presentation gets updated.
+      </div>
+      <div class="two-col">
+        <div>
+          <h3 class="section-h3">The prompt</h3>
+          <div class="prompt-box">
+"Research the competitive landscape for outpatient behavioral health services in the Atlanta, GA metro area. I want: (1) top 5 providers by market presence and differentiators, (2) recent market entries, closures, or expansions in the past 12 months, (3) most common gaps patients report in this market, (4) where a new entrant with strong clinical quality and tech-enabled care management could differentiate. Synthesize into a 1-page competitive brief."
+          </div>
+          <div class="tool-callout">
+            <span class="tc-label">Use:</span>
+            <span class="tc-tool">Perplexity</span>
+            <span class="tc-why">for current, cited market data</span>
+          </div>
+        </div>
+        <div>
+          <h3 class="section-h3">What you get</h3>
+          <ul class="output-list">
+            <li>1-page competitive brief with sources</li>
+            <li>Current market intelligence — not 18-month-old analyst reports</li>
+            <li>Board-ready strategic framing</li>
+            <li>Positioning gaps identified</li>
+          </ul>
+          <div class="uc-insight">
+            <span class="insight-label">Verify:</span>
+            Click the sources. Competitive intelligence is only as good as the underlying data. Perplexity's source links make verification fast.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- D4: CHANGE MGMT -->
+  <section class="slide" data-slide="25" data-track="D">
+    <div class="slide-inner">
+      <div class="use-case-header uc-d">
+        <span class="uc-badge uc-badge-d">D · 04</span>
+        <div><p class="eyebrow">Leadership &amp; Strategy</p><h2>EHR Implementation Change Communication</h2></div>
+      </div>
+      <div class="uc-pain">
+        <span class="pain-label">The pain:</span>
+        EHR implementations fail because of people, not technology. The communication plan exists as a slide deck that no one executes consistently.
+      </div>
+      <div class="two-col">
+        <div>
+          <h3 class="section-h3">The prompt</h3>
+          <div class="prompt-box">
+"We're implementing a new EHR over 18 months with 800 clinical and administrative staff. Create a change communication plan: (1) phased communication calendar from announcement through post-go-live with recommended channels per phase, (2) all-staff announcement — honest about the difficulty, clear about support, (3) manager FAQ with the 10 hardest questions managers will get, (4) 30-day post go-live pulse check email to surface problems early."
+          </div>
+        </div>
+        <div>
+          <h3 class="section-h3">What you get</h3>
+          <ul class="output-list">
+            <li>18-month communication backbone</li>
+            <li>Manager toolkit — the hardest questions, pre-answered</li>
+            <li>Pulse check built in from the start</li>
+            <li>Change communication that actually gets executed</li>
+          </ul>
+          <div class="uc-insight">
+            <span class="insight-label">Real talk:</span>
+            The communication plan that doesn't get written is the one that causes the $3M EHR implementation to fail at go-live. This takes 20 minutes to draft.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- D5: STRATEGIC DECISION -->
+  <section class="slide" data-slide="26" data-track="D">
+    <div class="slide-inner">
+      <div class="use-case-header uc-d">
+        <span class="uc-badge uc-badge-d">D · 05</span>
+        <div><p class="eyebrow">Leadership &amp; Strategy</p><h2>Strategic Decision Framing</h2></div>
+      </div>
+      <div class="uc-pain">
+        <span class="pain-label">The pain:</span>
+        Leaders have the data and the instinct. The missing piece is a structure rigorous enough to align a leadership team or board.
+      </div>
+      <div class="two-col">
+        <div>
+          <h3 class="section-h3">The prompt</h3>
+          <div class="prompt-box">
+"I'm considering acquiring a 3-location urgent care chain in our market. Help me think through this rigorously. Create: (1) structured decision framework — key strategic questions to answer before proceeding, (2) acquisition vs. organic growth vs. partnership pro/con analysis, (3) top 5 due diligence questions, (4) most common failure reasons for this type of acquisition + how I'd mitigate each, (5) one-page decision memo for my board."
+          </div>
+        </div>
+        <div>
+          <h3 class="section-h3">What you get</h3>
+          <ul class="output-list">
+            <li>A structured, rigorous decision framework</li>
+            <li>Options analysis — not just the one you're leaning toward</li>
+            <li>Failure mode awareness before commitment</li>
+            <li>Board-ready decision memo</li>
+          </ul>
+          <div class="uc-insight">
+            <span class="insight-label">The real value:</span>
+            AI as a thinking partner surfaces the questions you didn't know to ask — before the decision is made, not after.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSE -->
+  <section class="slide slide-close" data-slide="27" data-track="close">
+    <div class="slide-inner centered">
+      <p class="eyebrow">End of Module 3</p>
+      <h2>Build your personal use case map</h2>
+      <p class="slide-lead">You've seen 20 use cases across four roles. Now make it yours.</p>
+      <div class="use-case-map">
+        <div class="ucm-instruction">For each track, identify the <strong>one use case</strong> you will try this week:</div>
+        <div class="ucm-grid">
+          <div class="ucm-card ucm-a"><div class="ucm-letter">A</div><h4>Healthcare Ops</h4><p>Which use case is your biggest time drain right now?</p></div>
+          <div class="ucm-card ucm-b"><div class="ucm-letter">B</div><h4>Staffing</h4><p>Which recruitment or workforce task could you never do fast enough?</p></div>
+          <div class="ucm-card ucm-c"><div class="ucm-letter">C</div><h4>Compliance</h4><p>What's the document that's been on your to-do list for three months?</p></div>
+          <div class="ucm-card ucm-d"><div class="ucm-letter">D</div><h4>Leadership</h4><p>What's the communication you keep putting off because of how long it takes to write?</p></div>
+        </div>
+      </div>
+      <div class="module-nav-box">
+        <p>Coming in <strong>Module 4:</strong> Building the AI-Ready Organization — change management, governance, measuring ROI, and creating internal champions.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="controls">
+  <button class="ctrl-btn" id="prevBtn" onclick="prevSlide()">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+  </button>
+  <div class="dot-nav" id="dotNav"></div>
+  <button class="ctrl-btn" id="nextBtn" onclick="nextSlide()">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+  </button>
+</div>
+
+<button class="fac-toggle" onclick="toggleFacPanel()">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+</button>
+<div class="fac-panel" id="facPanel">
+  <div class="fac-panel-header">
+    <h3>Facilitator Notes</h3>
+    <button onclick="toggleFacPanel()">✕</button>
+  </div>
+  <div class="fac-panel-body" id="facPanelBody"></div>
+</div>
+<div class="kbd-hint"><span class="kbd">←</span><span class="kbd">→</span> navigate &nbsp;|&nbsp; <span class="kbd">F</span> notes</div>
+
+<script src="app.js"></script>
+</body>
+</html>

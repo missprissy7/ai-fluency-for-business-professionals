@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>AI for Your Life — The Personal Playbook</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-left">
+    <svg class="logo" viewBox="0 0 40 40" fill="none" aria-label="KEDAL Solutions">
+      <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
+      <path d="M13 13 L13 27 M13 20 L22 13 M13 20 L22 27" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="28" cy="20" r="4" fill="currentColor" opacity="0.7"/>
+    </svg>
+    <span class="nav-title">AI for Your Life</span>
+    <span class="nav-playbook-badge">Personal Playbook</span>
+  </div>
+  <div class="nav-right">
+    <span class="slide-counter" id="slideCounter">1 / 22</span>
+    <button class="theme-btn" data-theme-toggle aria-label="Switch theme">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </div>
+</nav>
+
+<div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+
+<main class="deck" id="deck">
+
+  <!-- SLIDE 1: COVER -->
+  <section class="slide slide-cover active" data-slide="1">
+    <div class="cover-bg"></div>
+    <div class="cover-content">
+      <p class="cover-eyebrow">The Personal Playbook</p>
+      <h1 class="cover-title">AI for<br><em>Your Life.</em></h1>
+      <p class="cover-sub">15 use cases for your time, your career, and your biggest decisions. No tech background required.</p>
+      <div class="cover-meta"><span>Teacher Scott</span><span class="dot">·</span><span>KEDAL Solutions</span></div>
+    </div>
+    <div class="cover-nav"><button class="btn-next" onclick="nextSlide()">Let's go <span>→</span></button></div>
+  </section>
+
+  <!-- SLIDE 2: ONE TOOL -->
+  <section class="slide" data-slide="2">
+    <div class="slide-inner">
+      <p class="eyebrow">The big idea</p>
+      <h2>One tool. Every part of your life.</h2>
+      <p class="slide-lead">AI isn't just for work. It's for the 2–4 hours a day you spend writing, researching, and organizing — at home, at work, and everywhere in between.</p>
+      <div class="life-areas">
+        <div class="la-card la-time">
+          <div class="la-icon">⏰</div>
+          <h4>Your Time</h4>
+          <p>Weekly planning, email, research, hard conversations, long documents</p>
+          <div class="la-tag">Part 1</div>
+        </div>
+        <div class="la-card la-career">
+          <div class="la-icon">🚀</div>
+          <h4>Your Career</h4>
+          <p>Resume, interviews, negotiation, personal brand, learning anything faster</p>
+          <div class="la-tag">Part 2</div>
+        </div>
+        <div class="la-card la-life">
+          <div class="la-icon">🏠</div>
+          <h4>Your Life</h4>
+          <p>Legal documents, health research, home buying, finances, family</p>
+          <div class="la-tag">Part 3</div>
+        </div>
+      </div>
+      <div class="big-idea-box">
+        <p>Most people spend 2–4 hours a day on tasks that are mostly writing, researching, or organizing information. <strong>Almost none of that requires your unique judgment.</strong> AI handles the production so your brain can handle the thinking.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 3: THREE GUARDRAILS -->
+  <section class="slide" data-slide="3">
+    <div class="slide-inner">
+      <p class="eyebrow">Before we start</p>
+      <h2>Three things to know.</h2>
+      <p class="slide-lead">This isn't magic. It's a very capable tool with a few rules that make it useful instead of frustrating.</p>
+      <div class="guardrails">
+        <div class="guardrail gr-1">
+          <div class="gr-num">1</div>
+          <div class="gr-body">
+            <h4>AI drafts. You decide.</h4>
+            <p>Especially for health, legal, and financial matters — AI gives you a well-organized starting point. Your judgment, and when needed a professional, makes the final call. This is true for every tool in this playbook.</p>
+          </div>
+        </div>
+        <div class="guardrail gr-2">
+          <div class="gr-num">2</div>
+          <div class="gr-body">
+            <h4>Specific beats vague. Always.</h4>
+            <p>The more context you give it, the better the output. "Write me an email" gets you something generic. "Write me an email to my landlord explaining that the heat has been broken for 3 weeks and I need a repair date in writing" gets you something you can actually send.</p>
+          </div>
+        </div>
+        <div class="guardrail gr-3">
+          <div class="gr-num">3</div>
+          <div class="gr-body">
+            <h4>Verify anything important.</h4>
+            <p>Numbers, dates, medical specifics, legal requirements — double-check them. AI is extremely good at structure, tone, and reasoning. It occasionally makes up facts. For anything high-stakes, confirm the specifics before you act on them.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 4: PART 1 DIVIDER -->
+  <section class="slide slide-divider divider-time" data-slide="4">
+    <div class="divider-content">
+      <div class="div-icon-large">⏰</div>
+      <div>
+        <p class="div-eyebrow">Part 1</p>
+        <h2 class="div-title">Your Time</h2>
+        <p class="div-sub">Five ways to get back hours every week — starting today.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 5: WEEKLY BRAIN DUMP -->
+  <section class="slide" data-slide="5">
+    <div class="slide-inner">
+      <div class="uc-header uc-time">
+        <span class="uc-num">P · 01</span>
+        <div><p class="eyebrow">Your Time</p><h2>The Weekly Brain Dump</h2></div>
+      </div>
+      <div class="uc-pain"><span class="pain-label">Sound familiar?</span> Sunday anxiety — the week ahead feels unmanageable. Tasks are scattered across your head, your phone, three apps, and a sticky note.</div>
+      <div class="two-col">
+        <div>
+          <h3 class="section-h3">The prompt</h3>
+          <div class="prompt-box">"Here's everything on my plate this week — it's messy, but here's the brain dump: [paste everything]. Help me turn this into a structured weekly plan. Group tasks by type: urgent, important-not-urgent, and delegatable. Suggest which days to tackle which clusters. Flag anything that's likely to take longer than I think. Give me one clear 'start here' task for Monday morning."</div>
+        </div>
+        <div>
+          <h3 class="section-h3">What happens</h3>
+          <ul class="output-list">
+            <li>Your chaos becomes a structured week plan</li>
+            <li>Priorities are surfaced, not buried</li>
+            <li>Monday has a clear starting point</li>
+          </ul>
+          <div class="time-save">
+            <span class="ts-before">Before: Sunday anxiety, scattered lists</span>
+            <span class="ts-arrow">→</span>
+            <span class="ts-after">After: 3-minute plan, clear week</span>
+          </div>
+          <div class="uc-insight mt">
+            <span class="insight-label">Try this now:</span>
+            Open any AI tool and paste everything on your mind right now. You don't need to clean it up first. The mess is the input.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 6: EMAIL -->
+  <section class="slide" data-slide="6">
+    <div class="slide-inner">
+      <div class="uc-header uc-time">
+        <span class="uc-num">P · 02</span>
+        <div><p class="eyebrow">Your Time</p><h2>Email That Writes Itself</h2></div>
+      </div>
+      <div class="uc-pain"><span class="pain-label">Sound familiar?</span> Staring at a blank reply for 20 minutes. The email isn't complicated — but the tone, the phrasing, the "how do I say this without it coming out wrong" drains more energy than the task deserves.</div>
+      <div class="two-col">
+        <div>
+          <h3 class="section-h3">The prompt</h3>
+          <div class="prompt-box">"Write an email for me. Context: [explain the situation]. Recipient: [who they are and your relationship]. What I need to say: [key points]. Tone: [polite but firm / warm and personal / professional but friendly]. Keep it concise — I hate long emails."</div>
+          <div class="prompt-followup mt">
+            <span class="fu-label">Then try:</span>
+            "Make it shorter" · "Make it warmer" · "Add that I'm available by phone"
+          </div>
+        </div>
+        <div>
+          <h3 class="section-h3">Works for</h3>
+          <ul class="output-list">
+            <li>Difficult replies to a landlord, employer, or contractor</li>
+            <li>Thank-you notes that actually sound genuine</li>
+            <li>Saying no without damaging a relationship</li>
+            <li>Following up without sounding desperate</li>
+            <li>Cold outreach that doesn't read as spam</li>
+          </ul>
+          <div class="time-save">
+            <span class="ts-before">Before: 15–20 min of staring and rewrites</span>
+            <span class="ts-arrow">→</span>
+            <span class="ts-after">After: Draft in 30 sec, sent in 3 min</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 7: RESEARCH -->
+  <section class="slide" data-slide="7">
+    <div class="slide-inner">
+      <div class="uc-header uc-time">
+        <span class="uc-num">P · 03</span>
+        <div><p class="eyebrow">Your Time</p><h2>Research Without the Rabbit Hole</h2></div>
+      </div>
+      <div class="uc-pain"><span class="pain-label">Sound familiar?</span> You need to research something — a symptom, a neighborhood, a car repair, a new appliance. 90 minutes later you're 15 tabs deep and more confused than when you started.</div>
+      <div class="two-col">
+        <div>
+          <h3 class="section-h3">The prompt</h3>
+          <div class="prompt-box">"I need to research [topic]. My specific question is: [what you actually want to know]. Give me: (1) the key facts I need to understand this topic, (2) the 2–3 things most people get wrong or miss, (3) what I should do or decide next based on this. Keep it practical, not encyclopedic."</div>
+          <div class="tool-callout mt">
+            <span class="tc-label">Best tool:</span>
+            <span class="tc-tool">Perplexity</span>
+            <span class="tc-why">— gives you sources you can actually check</span>
+          </div>
+        </div>
+        <div>
+          <h3 class="section-h3">What you get</h3>
+          <ul class="output-list">
+            <li>Your actual question answered — not 47 search results</li>
+            <li>The things you didn't know to ask about</li>
+            <li>A clear next step, not more reading</li>
+          </ul>
+          <div class="uc-insight mt">
+            <span class="insight-label">The shift:</span>
+            You stop being a researcher and start being a decision-maker. AI does the synthesis; you do the judgment.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 8: HARD CONVERSATION -->
+  <section class="slide" data-slide="8">
+    <div class="slide-inner">
+      <div class="uc-header uc-time">
+        <span class="uc-num">P · 04</span>
+        <div><p class="eyebrow">Your Time</p><h2>Prepare for the Hard Conversation</h2></div>
+      </div>
+      <div class="uc-pain"><span class="pain-label">Sound familiar?</span> You have a conversation you've been dreading — asking for a raise, talking to a difficult family member, confronting a friend. You spend days anxious about it instead of ready for it.</div>
+      <div class="two-col">
+        <div>
+          <h3 class="section-h3">The prompt</h3>
+          <div class="prompt-box">"I have a difficult conversation coming up. The situation: [explain]. The person: [who they are, your relationship, their likely reaction]. What I want to accomplish: [your goal]. Help me: (1) draft what I want to open with, (2) anticipate the 3 most likely pushback responses and how I'd answer each, (3) identify the one thing I should avoid saying. Then offer to role-play the conversation with me."</div>
+        </div>
+        <div>
+          <h3 class="section-h3">What you get</h3>
+          <div class="insight-card">
+            <p>You walk into the conversation <strong>prepared, not just worried.</strong> You've already heard the hardest pushback responses — in a safe space — so nothing in the real conversation surprises you.</p>
+          </div>
+          <ul class="output-list mt">
+            <li>Opening line you've already practiced</li>
+            <li>Responses to the 3 things you're most afraid they'll say</li>
+            <li>A clear goal you can hold onto if it gets emotional</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 9: SUMMARIZE ANYTHING -->
+  <section class="slide" data-slide="9">
+    <div class="slide-inner">
+      <div class="uc-header uc-time">
+        <span class="uc-num">P · 05</span>
+        <div><p class="eyebrow">Your Time</p><h2>Summarize Anything</h2></div>
+      </div>
+      <div class="uc-pain"><span class="pain-label">Sound familiar?</span> Long email threads, terms and conditions, insurance documents, articles you were supposed to read — things you technically need to understand but don't have time to read carefully.</div>
+      <div class="two-col">
+        <div>
+          <h3 class="section-h3">The prompt</h3>
+          <div class="prompt-box">"Summarize this for me. I want: (1) the key points in plain language, (2) anything that requires my attention or a decision from me, (3) any red flags or anything that seems unusual. [Paste the document, article, or thread]"</div>
+        </div>
+        <div>
+          <h3 class="section-h3">Works for</h3>
+          <ul class="output-list">
+            <li>Long email threads — "what do I actually need to respond to?"</li>
+            <li>Terms &amp; conditions before signing anything</li>
+            <li>News articles, academic papers, research</li>
+            <li>Meeting notes or transcripts</li>
+            <li>Insurance policies and financial documents</li>
+          </ul>
+          <div class="time-save mt">
+            <span class="ts-before">Before: 20-min careful read</span>
+            <span class="ts-arrow">→</span>
+            <span class="ts-after">After: 45-second summary + action items</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 10: PART 2 DIVIDER -->
+  <section class="slide slide-divider divider-career" data-slide="10">
+    <div class="divider-content">
+      <div class="div-icon-large">🚀</div>
+      <div>
+        <p class="div-eyebrow">Part 2</p>
+        <h2 class="div-title">Your Career</h2>
+        <p class="div-sub">Your career is a product. AI helps you market it, develop it, and navigate it — strategically.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 11: RESUME -->
+  <section class="slide" data-slide="11">
+    <div class="slide-inner">
+      <div class="uc-header uc-career">
+        <span class="uc-num uc-num-career">C · 01</span>
+        <div><p class="eyebrow">Your Career</p><h2>Resume That Gets Read</h2></div>
+      </div>
+      <div class="uc-pain"><span class="pain-label">The problem:</span> Your resume is fine. But "fine" doesn't get callbacks. It needs to speak the exact language of each job posting — and most people send the same resume everywhere.</div>
+      <div class="two-col">
+        <div>
+          <h3 class="section-h3">The prompt</h3>
+          <div class="prompt-box">"Here is my current resume: [paste]. Here is the job description I'm applying for: [paste JD]. Rewrite my resume to: (1) match the language and keywords in this job description, (2) quantify my accomplishments — ask me for numbers if you need them, (3) lead with my strongest relevant experience for this specific role. One page if possible."</div>
+        </div>
+        <div>
+          <h3 class="section-h3">What changes</h3>
+          <ul class="output-list">
+            <li>Keywords match what the ATS system is scanning for</li>
+            <li>Your experience is framed for this specific role</li>
+            <li>Accomplishments are quantified — not just described</li>
+          </ul>
+          <div class="time-save mt">
+            <span class="ts-before">Before: 2–3 hrs tailoring per application</span>
+            <span class="ts-arrow">→</span>
+            <span class="ts-after">After: 10 min, tailored every time</span>
+          </div>
+          <div class="uc-insight mt">
+            <span class="insight-label">The math:</span>
+            Tailored resumes get 40% more callbacks than generic ones. Most people don't tailor because it takes too long. Now it doesn't.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 12: INTERVIEW PREP -->
+  <section class="slide" data-slide="12">
+    <div class="slide-inner">
+      <div class="uc-header uc-career">
+        <span class="uc-num uc-num-career">C · 02</span>
+        <div><p class="eyebrow">Your Career</p><h2>Interview Prep That Actually Works</h2></div>
+      </div>
+      <div class="uc-pain"><span class="pain-label">The problem:</span> "Tell me about yourself" — and you freeze, ramble, or answer the question they asked instead of the one they meant.</div>
+      <div class="two-col">
+        <div>
+          <h3 class="section-h3">The prompt</h3>
+          <div class="prompt-box">"I have an interview for [role] at [type of company]. My background is [brief summary]. Help me: (1) craft a 90-second 'tell me about yourself' tailored to this role, (2) generate the 8 most likely interview questions for this type of role, (3) help me build a STAR-format answer for 3 behavioral questions using my actual experience. Then offer to conduct a mock interview with me."</div>
+        </div>
+        <div>
+          <h3 class="section-h3">The mock interview</h3>
+          <div class="insight-card">
+            <p>After you build your answers, tell the AI: <em>"Now interview me. Ask me your questions one at a time and give me feedback on each answer."</em></p>
+            <p>You'll do the actual interview having already practiced the hardest questions — with feedback — in a space where it didn't count.</p>
+          </div>
+          <div class="tool-tease mt">
+            <span class="tease-label">Tools:</span>
+            <span class="tool-tag">ChatGPT GPT-4o</span>
+            <span class="tool-tag">Claude</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 13: NEGOTIATION -->
+  <section class="slide" data-slide="13">
+    <div class="slide-inner">
+      <div class="uc-header uc-career">
+        <span class="uc-num uc-num-career">C · 03</span>
+        <div><p class="eyebrow">Your Career</p><h2>Negotiate What You're Worth</h2></div>
+      </div>
+      <div class="uc-pain"><span class="pain-label">The problem:</span> Most people don't negotiate. Or they do it without data, without a script, and fold the moment there's any pushback.</div>
+      <div class="two-col">
+        <div>
+          <h3 class="section-h3">The prompt</h3>
+          <div class="prompt-box">"I'm preparing to negotiate my salary for [role] in [city]. Current offer: [amount]. My experience: [X years, key skills]. Research: (1) market range for this role in this area, (2) factors that justify the high end. Then write: (3) the exact counter email or script I'll use, (4) my response if they say the offer is firm."</div>
+          <div class="tool-callout mt">
+            <span class="tc-label">Start with:</span>
+            <span class="tc-tool">Perplexity</span>
+            <span class="tc-why">— for current market salary data with sources</span>
+          </div>
+        </div>
+        <div>
+          <h3 class="section-h3">The numbers</h3>
+          <div class="stat-cards">
+            <div class="stat-card">
+              <div class="stat-num">85%</div>
+              <p>of employers have room to negotiate beyond their first offer</p>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num">5–15%</div>
+              <p>typical salary increase from negotiating — on the same job</p>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num">~60%</div>
+              <p>of people never negotiate at all — usually because they don't know how</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 14: PERSONAL BRAND -->
+  <section class="slide" data-slide="14">
+    <div class="slide-inner">
+      <div class="uc-header uc-career">
+        <span class="uc-num uc-num-career">C · 04</span>
+        <div><p class="eyebrow">Your Career</p><h2>Build Your Personal Brand</h2></div>
+      </div>
+      <div class="uc-pain"><span class="pain-label">The problem:</span> You know you should be more visible professionally — LinkedIn, a clear bio, a point of view — but writing about yourself feels awkward and everything you draft sounds either generic or braggy.</div>
+      <div class="two-col">
+        <div>
+          <h3 class="section-h3">The prompt</h3>
+          <div class="prompt-box">"Help me build my professional brand. Who I am: [role, industry, experience]. What I'm most passionate about professionally: [interests/values]. What I want to be known for: [your goal]. Give me: (1) a LinkedIn headline + summary, (2) 3 LinkedIn post ideas with different angles on topics I care about, (3) a 3-sentence professional bio I can use anywhere."</div>
+        </div>
+        <div>
+          <h3 class="section-h3">What this unlocks</h3>
+          <ul class="output-list">
+            <li>A LinkedIn profile that actually reflects who you are now</li>
+            <li>Content ideas you can post consistently — not blank page panic</li>
+            <li>A bio that opens doors in introductions, proposals, and pitches</li>
+          </ul>
+          <div class="uc-insight mt">
+            <span class="insight-label">Key note:</span>
+            Tell AI your actual voice — "I'm direct and a little sarcastic" or "I'm warm and care deeply about community." The output will sound like you, not like a LinkedIn template.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 15: LEARN ANYTHING -->
+  <section class="slide" data-slide="15">
+    <div class="slide-inner">
+      <div class="uc-header uc-career">
+        <span class="uc-num uc-num-career">C · 05</span>
+        <div><p class="eyebrow">Your Career</p><h2>Learn Anything Faster</h2></div>
+      </div>
+      <div class="uc-pain"><span class="pain-label">The problem:</span> You want to learn something new — a skill, a software, a subject — but formal courses are too slow, too expensive, or not quite right for what you actually need.</div>
+      <div class="two-col">
+        <div>
+          <h3 class="section-h3">The prompt</h3>
+          <div class="prompt-box">"I want to learn [topic/skill]. My current level: [beginner / basics / intermediate]. My goal: [what you want to be able to do]. Time available: [X hrs/week]. Design a learning plan: what to learn first, in what order, what resources to use, and how to practice. Then teach me the first concept right now."</div>
+        </div>
+        <div>
+          <h3 class="section-h3">AI as your tutor</h3>
+          <div class="insight-card">
+            <p>You have a personal tutor available 24/7 that explains things at your exact level, in your preferred style, with as many examples and practice questions as you need.</p>
+            <p>Unlike a course, it <strong>answers your specific questions</strong> — not the questions the curriculum assumes you have.</p>
+          </div>
+          <div class="uc-insight mt">
+            <span class="insight-label">The habit:</span>
+            After any lesson, ask: "Give me 3 practice questions on what we just covered." That's the difference between passive learning and retention.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 16: PART 3 DIVIDER -->
+  <section class="slide slide-divider divider-life" data-slide="16">
+    <div class="divider-content">
+      <div class="div-icon-large">🏠</div>
+      <div>
+        <p class="div-eyebrow">Part 3</p>
+        <h2 class="div-title">Your Life</h2>
+        <p class="div-sub">The biggest decisions most people navigate with the least support. AI changes that.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 17: LEGAL DOCS -->
+  <section class="slide" data-slide="17">
+    <div class="slide-inner">
+      <div class="uc-header uc-life">
+        <span class="uc-num uc-num-life">L · 01</span>
+        <div><p class="eyebrow">Your Life</p><h2>Understand Any Legal Document</h2></div>
+      </div>
+      <div class="uc-pain"><span class="pain-label">The problem:</span> Lease agreements, contracts, terms and conditions, insurance policies — documents you're supposed to read, don't have time to fully understand, and sign anyway.</div>
+      <div class="two-col">
+        <div>
+          <h3 class="section-h3">The prompt</h3>
+          <div class="prompt-box">"Explain this document to me in plain language. I need to know: (1) what I'm agreeing to in simple terms, (2) any obligations that could cost me money, time, or rights, (3) anything that seems unusual for a standard [lease / contract / policy], (4) the 3 most important things to know before I sign. [Paste document]"</div>
+        </div>
+        <div>
+          <h3 class="section-h3">Important</h3>
+          <div class="guardrail-note">
+            <div class="gn-icon">⚖️</div>
+            <div>
+              <p><strong>AI gives you a plain-language summary — not legal advice.</strong> If something looks risky or the stakes are high, talk to a lawyer. But you'll walk into that conversation knowing exactly what to ask — which saves attorney time and your money.</p>
+            </div>
+          </div>
+          <ul class="output-list mt">
+            <li>Lease renewal terms decoded before you sign</li>
+            <li>Employment contract clauses flagged</li>
+            <li>App terms you actually need to know about</li>
+            <li>Insurance policy exclusions surfaced</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 18: HEALTH RESEARCH -->
+  <section class="slide" data-slide="18">
+    <div class="slide-inner">
+      <div class="uc-header uc-life">
+        <span class="uc-num uc-num-life">L · 02</span>
+        <div><p class="eyebrow">Your Life</p><h2>Health Research You Can Actually Use</h2></div>
+      </div>
+      <div class="uc-pain"><span class="pain-label">The problem:</span> You leave a doctor's appointment with more questions than when you arrived. Or you go online and scare yourself with worst-case scenarios that may not even apply to your situation.</div>
+      <div class="two-col">
+        <div>
+          <h3 class="section-h3">The prompt</h3>
+          <div class="prompt-box">"Help me understand [diagnosis / medication / test result / procedure]. Explain: (1) what this means in plain language, (2) the most common treatment approaches and what the evidence says, (3) questions I should ask my doctor at my next appointment, (4) things I should watch for or tell my doctor right away. Clear language — I'm not a medical professional."</div>
+        </div>
+        <div>
+          <h3 class="section-h3">The real value</h3>
+          <div class="guardrail-note">
+            <div class="gn-icon">🩺</div>
+            <div><p><strong>AI doesn't replace your doctor.</strong> It helps you have a better conversation with them. You walk in informed, with specific questions, and you understand the answers instead of nodding along.</p></div>
+          </div>
+          <div class="uc-insight mt">
+            <span class="insight-label">Before every appointment:</span>
+            "I have an appointment with my doctor about [issue]. What questions should I ask to make sure I understand my situation and my options fully?"
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 19: HOME -->
+  <section class="slide" data-slide="19">
+    <div class="slide-inner">
+      <div class="uc-header uc-life">
+        <span class="uc-num uc-num-life">L · 03</span>
+        <div><p class="eyebrow">Your Life</p><h2>Navigate Home Buying &amp; Renting</h2></div>
+      </div>
+      <div class="uc-pain"><span class="pain-label">The problem:</span> Buying or renting a home involves more unfamiliar terms, hidden costs, and potential mistakes than almost any other transaction in adult life. Most people figure it out by making expensive errors.</div>
+      <div class="two-col">
+        <div>
+          <h3 class="section-h3">The prompt</h3>
+          <div class="prompt-box">"I'm [buying / renting] a home and I have questions about [the inspection process / what's in my lease / what closing costs I can negotiate / what to ask the landlord]. Give me: (1) a plain-language explanation of how this works, (2) the 5 things most people miss or get wrong, (3) specific questions to ask [the realtor / landlord / inspector / lender] before moving forward."</div>
+        </div>
+        <div>
+          <h3 class="section-h3">Use throughout the process</h3>
+          <ul class="output-list">
+            <li>"Explain what an earnest money deposit is and when I could lose it"</li>
+            <li>"What are red flags in a home inspection report I shouldn't ignore?"</li>
+            <li>"Which closing costs are negotiable and how do I ask?"</li>
+            <li>"What should I look for in a lease renewal that benefits the landlord?"</li>
+            <li>"Explain the difference between pre-qualification and pre-approval"</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 20: PERSONAL FINANCE -->
+  <section class="slide" data-slide="20">
+    <div class="slide-inner">
+      <div class="uc-header uc-life">
+        <span class="uc-num uc-num-life">L · 04</span>
+        <div><p class="eyebrow">Your Life</p><h2>Personal Finance — Understand and Plan</h2></div>
+      </div>
+      <div class="uc-pain"><span class="pain-label">The problem:</span> Financial planning feels overwhelming, professional advice is expensive, and most people avoid it until something goes wrong.</div>
+      <div class="two-col">
+        <div>
+          <h3 class="section-h3">The prompt</h3>
+          <div class="prompt-box">"Help me think through my personal finances. My situation: [income range, main expenses, any debt, savings goal]. I want to understand: (1) how to prioritize between [paying down debt / emergency fund / retirement / a specific goal], (2) what I should know about [401k / Roth IRA / credit score / insurance], (3) a practical action plan for the next 30 days that doesn't require a financial advisor."</div>
+        </div>
+        <div>
+          <h3 class="section-h3">What AI does here</h3>
+          <div class="guardrail-note">
+            <div class="gn-icon">💰</div>
+            <div><p><strong>AI gives you a framework. A certified financial planner gives you personalized advice.</strong> AI makes that planner conversation more productive — and you'll know when you actually need one versus when you can act on your own.</p></div>
+          </div>
+          <div class="uc-insight mt">
+            <span class="insight-label">Start here:</span>
+            "Explain the difference between a Roth IRA and a traditional IRA in plain language, and tell me which situations make each one better."
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 21: FAMILY -->
+  <section class="slide" data-slide="21">
+    <div class="slide-inner">
+      <div class="uc-header uc-life">
+        <span class="uc-num uc-num-life">L · 05</span>
+        <div><p class="eyebrow">Your Life</p><h2>Family &amp; Hard Conversations</h2></div>
+      </div>
+      <div class="uc-pain"><span class="pain-label">The problem:</span> Parenting, caregiving, and family relationships throw questions at you constantly — how to talk to a child about something hard, how to navigate a conflict, how to handle a situation you've never faced before.</div>
+      <div class="two-col">
+        <div>
+          <h3 class="section-h3">The prompt</h3>
+          <div class="prompt-box">"I need help navigating a family situation. [Describe: who's involved, what happened, what you're trying to accomplish]. Help me: (1) understand this from the other person's perspective — what might they be feeling or experiencing, (2) figure out the right approach for this situation, (3) give me specific language I can use — how to start, what to say if it goes sideways. Tone: practical and warm, not clinical."</div>
+        </div>
+        <div>
+          <h3 class="section-h3">Real examples</h3>
+          <ul class="output-list">
+            <li>"How do I talk to my 10-year-old about [difficult topic] in language they can actually understand?"</li>
+            <li>"Help me set a limit with a family member without it turning into a fight"</li>
+            <li>"I'm helping care for an aging parent — what questions should I be asking their doctor?"</li>
+            <li>"Help me write a message to [person] that addresses what happened without making it worse"</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 22: CLOSE -->
+  <section class="slide slide-close-personal" data-slide="22">
+    <div class="slide-inner centered">
+      <p class="eyebrow">Your Personal Toolkit</p>
+      <h2>What are you starting with?</h2>
+      <p class="slide-lead">You've seen 15 use cases. Pick one. Start today.</p>
+      <div class="toolkit-grid">
+        <div class="tk-card tk-time">
+          <div class="tk-icon">⏰</div>
+          <h4>Your Time</h4>
+          <p>Which task steals the most time from your week right now?</p>
+        </div>
+        <div class="tk-card tk-career">
+          <div class="tk-icon">🚀</div>
+          <h4>Your Career</h4>
+          <p>What career move have you been putting off because it felt like too much work?</p>
+        </div>
+        <div class="tk-card tk-life">
+          <div class="tk-icon">🏠</div>
+          <h4>Your Life</h4>
+          <p>What decision or document have you been avoiding because you didn't know where to start?</p>
+        </div>
+      </div>
+      <div class="close-start-prompt">
+        <span class="csp-label">One prompt to start anywhere:</span>
+        "I want to use AI to help me with [describe your situation]. I'm not sure exactly what to ask — can you help me figure out the right prompt for what I need?"
+      </div>
+      <div class="close-tagline">
+        <p>The best AI tool is the one you actually use. <strong>Start with one thing. Build from there.</strong></p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="controls">
+  <button class="ctrl-btn" id="prevBtn" onclick="prevSlide()">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+  </button>
+  <div class="dot-nav" id="dotNav"></div>
+  <button class="ctrl-btn" id="nextBtn" onclick="nextSlide()">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+  </button>
+</div>
+
+<button class="fac-toggle" onclick="toggleFacPanel()">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+</button>
+<div class="fac-panel" id="facPanel">
+  <div class="fac-panel-header">
+    <h3>Facilitator Notes</h3>
+    <button onclick="toggleFacPanel()">✕</button>
+  </div>
+  <div class="fac-panel-body" id="facPanelBody"></div>
+</div>
+<div class="kbd-hint"><span class="kbd">←</span><span class="kbd">→</span> navigate &nbsp;|&nbsp; <span class="kbd">F</span> notes</div>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Building the AI-Ready Organization — Module 4</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-left">
+    <svg class="logo" viewBox="0 0 40 40" fill="none" aria-label="KEDAL Solutions">
+      <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
+      <path d="M13 13 L13 27 M13 20 L22 13 M13 20 L22 27" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="28" cy="20" r="4" fill="currentColor" opacity="0.7"/>
+    </svg>
+    <span class="nav-title">Building the AI-Ready Org</span>
+    <span class="nav-module-badge">Module 4</span>
+  </div>
+  <div class="nav-right">
+    <span class="slide-counter" id="slideCounter">1 / 20</span>
+    <button class="theme-btn" data-theme-toggle aria-label="Switch theme">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </div>
+</nav>
+
+<div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+
+<main class="deck" id="deck">
+
+  <!-- SLIDE 1: COVER -->
+  <section class="slide slide-cover active" data-slide="1">
+    <div class="cover-bg"></div>
+    <div class="cover-content">
+      <p class="cover-eyebrow">AI Business Training — Module 4</p>
+      <h1 class="cover-title">Building the<br><em>AI-Ready</em><br>Organization.</h1>
+      <p class="cover-sub">Change management. Governance. ROI. The infrastructure that makes individual AI skill scale.</p>
+      <div class="cover-meta"><span>Teacher Scott</span><span class="dot">·</span><span>KEDAL Solutions</span></div>
+    </div>
+    <div class="cover-nav"><button class="btn-next" onclick="nextSlide()">Begin <span>→</span></button></div>
+  </section>
+
+  <!-- SLIDE 2: THE GAP -->
+  <section class="slide" data-slide="2">
+    <div class="slide-inner">
+      <p class="eyebrow">Where we are</p>
+      <h2>Individual skill isn't enough.</h2>
+      <p class="slide-lead">You've spent three modules building personal AI capability. Now comes the harder work.</p>
+      <div class="gap-model">
+        <div class="gap-side gap-left">
+          <div class="gap-icon">🧠</div>
+          <h4>Individual skill</h4>
+          <p>You can prompt. You can evaluate output. You have use cases that save you real time.</p>
+          <div class="gap-tag gap-tag-done">Modules 1–3</div>
+        </div>
+        <div class="gap-arrow-col">
+          <div class="gap-chasm">
+            <div class="gap-chasm-label">The gap</div>
+          </div>
+        </div>
+        <div class="gap-side gap-right">
+          <div class="gap-icon">🏢</div>
+          <h4>Organizational capability</h4>
+          <p>AI is embedded in workflows. Governance is in place. ROI is measured. Adoption doesn't depend on one enthusiastic person.</p>
+          <div class="gap-tag gap-tag-now">Module 4</div>
+        </div>
+      </div>
+      <div class="slide-note">Individual skill without organizational infrastructure is fragile. People revert. Momentum stalls. The training investment gets wasted. This module builds the bridge.</div>
+    </div>
+  </section>
+
+  <!-- SLIDE 3: WHY AI INITIATIVES FAIL -->
+  <section class="slide" data-slide="3">
+    <div class="slide-inner">
+      <p class="eyebrow">The problem</p>
+      <h2>Why AI initiatives fail.</h2>
+      <p class="slide-lead">It's almost never the technology. It's almost always the organization.</p>
+      <div class="fail-modes">
+        <div class="fail-card">
+          <div class="fail-num">01</div>
+          <h4>Top-down mandate, no ground-level buy-in</h4>
+          <p>Leadership announces "we're doing AI." Nobody explains what it means for the people doing the actual work. Resistance builds silently. The rollout stalls.</p>
+          <div class="fail-signal">Signal: <span>"Nobody's using it."</span></div>
+        </div>
+        <div class="fail-card">
+          <div class="fail-num">02</div>
+          <h4>Training without workflow integration</h4>
+          <p>People learn the tools — then return to roles where the workflows haven't changed. The new skills have nowhere to land. Three months later, the training is forgotten.</p>
+          <div class="fail-signal">Signal: <span>"We did the training but nothing changed."</span></div>
+        </div>
+        <div class="fail-card">
+          <div class="fail-num">03</div>
+          <h4>No internal champions</h4>
+          <p>Adoption depends entirely on the external trainer or one enthusiastic senior leader. When that person's attention moves on, so does the initiative.</p>
+          <div class="fail-signal">Signal: <span>"It died when [person] left."</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 4: ADOPTION CURVE -->
+  <section class="slide" data-slide="4">
+    <div class="slide-inner">
+      <p class="eyebrow">Change management</p>
+      <h2>Where most organizations stall.</h2>
+      <p class="slide-lead">AI adoption in organizations moves through four stages. Getting past Stage 2 is where most initiatives die.</p>
+      <div class="adoption-curve">
+        <div class="ac-stage ac-stage-1">
+          <div class="ac-stage-num">1</div>
+          <h4>Awareness</h4>
+          <p>People know AI exists. They've seen demos. Some have tried ChatGPT once.</p>
+          <div class="ac-timeline">0–3 months</div>
+        </div>
+        <div class="ac-arrow">→</div>
+        <div class="ac-stage ac-stage-2 ac-stall">
+          <div class="ac-stage-num">2</div>
+          <h4>Experimentation</h4>
+          <p>Individuals try tools for personal tasks. Results are inconsistent. No shared practice.</p>
+          <div class="ac-timeline">1–6 months</div>
+          <div class="ac-stall-tag">⚠ Most orgs stall here</div>
+        </div>
+        <div class="ac-arrow">→</div>
+        <div class="ac-stage ac-stage-3">
+          <div class="ac-stage-num">3</div>
+          <h4>Workflow Integration</h4>
+          <p>AI is embedded in recurring processes. Time savings are measurable.</p>
+          <div class="ac-timeline">3–12 months</div>
+        </div>
+        <div class="ac-arrow">→</div>
+        <div class="ac-stage ac-stage-4">
+          <div class="ac-stage-num">4</div>
+          <h4>Org Capability</h4>
+          <p>AI literacy is part of hiring, onboarding, performance, and culture.</p>
+          <div class="ac-timeline">12+ months</div>
+        </div>
+      </div>
+      <div class="slide-note">The move from Experimentation to Workflow Integration requires deliberate structure — not more training. That structure is what Pillars 1 and 2 build.</div>
+    </div>
+  </section>
+
+  <!-- SLIDE 5: CHAMPION MODEL -->
+  <section class="slide" data-slide="5">
+    <div class="slide-inner">
+      <p class="eyebrow">Change management</p>
+      <h2>The Internal Champion Model.</h2>
+      <p class="slide-lead">The single most effective driver of AI adoption is peer influence — not mandate, not training.</p>
+      <div class="two-col">
+        <div>
+          <h3 class="section-h3">What makes a champion</h3>
+          <div class="champ-list">
+            <div class="champ-item">
+              <span class="champ-check">✓</span>
+              <div><strong>Respected by peers</strong> — not necessarily the most senior person in the room</div>
+            </div>
+            <div class="champ-item">
+              <span class="champ-check">✓</span>
+              <div><strong>Has personally experienced AI value</strong> — they've run the prompts and saved the time</div>
+            </div>
+            <div class="champ-item">
+              <span class="champ-check">✓</span>
+              <div><strong>Given time and recognition</strong> — their champion role is visible, not volunteer extra work</div>
+            </div>
+            <div class="champ-item">
+              <span class="champ-check">✓</span>
+              <div><strong>Operates in a specific domain</strong> — one department or function, not organization-wide</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3 class="section-h3">How to identify them</h3>
+          <div class="insight-card">
+            <p>After every training session, ask participants to rate themselves: <em>"How likely are you to share what you learned today with someone on your team?"</em></p>
+            <p>Anyone who rates themselves <strong>4–5</strong> and ran at least one prompt live during the session is a champion candidate. That's your list.</p>
+          </div>
+          <div class="insight-note mt">
+            <span class="insight-label">The math:</span>
+            In a room of 20 participants, you typically identify 4–6 champions. Each champion influences 5–8 peers. One training session seeds adoption for 100+ people.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 6: CHAMPION PROMPT -->
+  <section class="slide" data-slide="6">
+    <div class="slide-inner">
+      <p class="eyebrow">Change management · Live demo</p>
+      <h2>Equip your champions.</h2>
+      <p class="slide-lead">Champions don't need to be trainers. They need one good peer session and one good prompt to run it.</p>
+      <h3 class="section-h3">The champion peer session prompt</h3>
+      <div class="prompt-box">
+"I've just completed AI skills training and want to share what I learned with my team. Help me design a 20-minute peer learning session. Our team of 8 manages [describe your function]. I want to show them 2–3 use cases from my own work where AI saved me meaningful time. Structure the session: an opening hook that gets their attention, a live demo sequence for each use case, 5 minutes for them to try one prompt themselves, and a close that gets specific commitments. Tone: peer-to-peer, not formal training."
+      </div>
+      <div class="two-col mt">
+        <div class="outcome-card">
+          <div class="oc-icon">📋</div>
+          <h4>What the champion gets</h4>
+          <p>A complete run-of-show for a 20-minute peer session — specific to their team and their use cases. They can run this the week after training. No facilitation experience required.</p>
+        </div>
+        <div class="outcome-card">
+          <div class="oc-icon">📈</div>
+          <h4>What the organization gets</h4>
+          <p>Adoption that multiplies without additional training budget. 5 champions running peer sessions = 40–50 additional people exposed to real, role-specific AI use cases within 30 days.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 7: 30-60-90 -->
+  <section class="slide" data-slide="7">
+    <div class="slide-inner">
+      <p class="eyebrow">Change management</p>
+      <h2>The 30-60-90 Adoption Plan.</h2>
+      <p class="slide-lead">What the first 90 days look like when adoption is structured, not accidental.</p>
+      <div class="plan-phases">
+        <div class="plan-phase phase-1">
+          <div class="phase-header">
+            <div class="phase-num">30</div>
+            <div class="phase-label">days</div>
+          </div>
+          <h4>Individual Habit Formation</h4>
+          <ul class="phase-list">
+            <li>Each participant picks <strong>one recurring task</strong> to run with AI</li>
+            <li>Commits to running that prompt at least <strong>3× this month</strong></li>
+            <li>Logs time saved — even on a Post-it</li>
+          </ul>
+          <div class="phase-focus">Focus: personal repetition</div>
+        </div>
+        <div class="plan-phase phase-2">
+          <div class="phase-header">
+            <div class="phase-num">60</div>
+            <div class="phase-label">days</div>
+          </div>
+          <h4>Team Integration</h4>
+          <ul class="phase-list">
+            <li>Identify <strong>2–3 workflows</strong> with the most templated, information-handling work</li>
+            <li>Map which steps AI can accelerate</li>
+            <li>Run one internal <strong>show-and-tell</strong> where early adopters share what's working</li>
+          </ul>
+          <div class="phase-focus">Focus: shared practice</div>
+        </div>
+        <div class="plan-phase phase-3">
+          <div class="phase-header">
+            <div class="phase-num">90</div>
+            <div class="phase-label">days</div>
+          </div>
+          <h4>Process Redesign</h4>
+          <ul class="phase-list">
+            <li>Redesign at least <strong>one end-to-end workflow</strong> with AI at multiple steps</li>
+            <li>Document the new workflow (use AI to write the SOP)</li>
+            <li><strong>Measure</strong> before/after time investment</li>
+          </ul>
+          <div class="phase-focus">Focus: embedded change</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 8: MANAGING RESISTANCE -->
+  <section class="slide" data-slide="8">
+    <div class="slide-inner">
+      <p class="eyebrow">Change management</p>
+      <h2>The 4 objections. The 4 responses.</h2>
+      <p class="slide-lead">Every room has these conversations. Know them before they happen.</p>
+      <div class="objection-list">
+        <div class="obj-item">
+          <div class="obj-q">"AI will take my job."</div>
+          <div class="obj-a">"AI changes what your job requires — not whether your job exists. The people who learn this become more valuable. The ones who don't get left behind by the people who did. This training is how we make sure that's not you."</div>
+        </div>
+        <div class="obj-item">
+          <div class="obj-q">"I don't trust the output."</div>
+          <div class="obj-a">"Good. You shouldn't. Module 2 was entirely about output evaluation. The skill isn't trusting AI — it's knowing when to verify and how. AI is a draft, not a decision."</div>
+        </div>
+        <div class="obj-item">
+          <div class="obj-q">"This is too complicated."</div>
+          <div class="obj-a">"You don't need to understand how it works. You need to know how to use it. You use your phone's GPS without understanding satellite triangulation. Same principle."</div>
+        </div>
+        <div class="obj-item">
+          <div class="obj-q">"We already tried it and it didn't work."</div>
+          <div class="obj-a">"What specifically didn't work? Most early failures come from the wrong tool, vague prompts, or not knowing how to evaluate output. Those are all solvable. Let's look at what happened."</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 9: PILLAR 2 DIVIDER -->
+  <section class="slide slide-divider divider-gov" data-slide="9">
+    <div class="divider-content">
+      <div class="div-icon">🔒</div>
+      <div>
+        <p class="div-eyebrow">Pillar 2</p>
+        <h2 class="div-title">Governance</h2>
+        <p class="div-sub">The policy and security infrastructure that makes AI safe to scale.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 10: THREE-TIER MODEL -->
+  <section class="slide" data-slide="10">
+    <div class="slide-inner">
+      <p class="eyebrow">Governance</p>
+      <h2>The three-tier security model.</h2>
+      <p class="slide-lead">Not all AI tools carry the same risk. Your policy needs to match the data to the tier.</p>
+      <div class="tier-table">
+        <div class="tier-row tier-header-row">
+          <div class="tier-cell tier-name-cell">Tier</div>
+          <div class="tier-cell">Examples</div>
+          <div class="tier-cell">BAA Available?</div>
+          <div class="tier-cell tier-ok-cell">Use for</div>
+          <div class="tier-cell tier-no-cell">Never use for</div>
+        </div>
+        <div class="tier-row tier-1-row">
+          <div class="tier-cell tier-name-cell"><span class="tier-badge t1">Tier 1</span><span class="tier-sub">Consumer Free</span></div>
+          <div class="tier-cell">ChatGPT free, Gemini free, Claude free</div>
+          <div class="tier-cell tier-no-baa">✗ No</div>
+          <div class="tier-cell tier-ok-cell">Public info, internal brainstorming, personal learning</div>
+          <div class="tier-cell tier-no-cell">Any PHI/PII, financial data, proprietary info</div>
+        </div>
+        <div class="tier-row tier-2-row">
+          <div class="tier-cell tier-name-cell"><span class="tier-badge t2">Tier 2</span><span class="tier-sub">Paid / Team</span></div>
+          <div class="tier-cell">ChatGPT Plus, Claude Pro</div>
+          <div class="tier-cell tier-no-baa">✗ No</div>
+          <div class="tier-cell tier-ok-cell">De-identified data, general business tasks</div>
+          <div class="tier-cell tier-no-cell">PHI, employee SSNs/DOBs, credentialing files, payroll</div>
+        </div>
+        <div class="tier-row tier-3-row">
+          <div class="tier-cell tier-name-cell"><span class="tier-badge t3">Tier 3</span><span class="tier-sub">Enterprise</span></div>
+          <div class="tier-cell">ChatGPT Enterprise, Copilot M365, Azure OpenAI</div>
+          <div class="tier-cell tier-yes-baa">✓ Yes</div>
+          <div class="tier-cell tier-ok-cell">PHI with safeguards, HR data, financial records</div>
+          <div class="tier-cell tier-no-cell">Requires IT config + BAA execution first</div>
+        </div>
+      </div>
+      <div class="insight-urgent-box">
+        <span class="insight-label">Right now in most organizations:</span>
+        Staff are using Tier 1 tools with PHI. No policy exists. No BAA is in place. That's an active compliance risk. The first governance action is an inventory of what tools your staff are already using.
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 11: HIPAA + AI -->
+  <section class="slide" data-slide="11">
+    <div class="slide-inner">
+      <p class="eyebrow">Governance</p>
+      <h2>HIPAA + AI: the intersection.</h2>
+      <p class="slide-lead">The existing HIPAA framework applies to AI use. Four principles your staff must understand.</p>
+      <div class="hipaa-grid">
+        <div class="hipaa-card">
+          <div class="hipaa-icon">⚖️</div>
+          <h4>Minimum Necessary</h4>
+          <p>Just because an AI tool can process an entire patient record doesn't mean it should. Use the minimum PHI necessary for the task — same standard as any other PHI disclosure.</p>
+        </div>
+        <div class="hipaa-card">
+          <div class="hipaa-icon">📄</div>
+          <h4>Business Associate Agreements</h4>
+          <p>Any AI vendor that processes, creates, or transmits PHI is a Business Associate. BAAs must exist before PHI enters that system. Most common violation: free consumer tools with patient data.</p>
+        </div>
+        <div class="hipaa-card">
+          <div class="hipaa-icon">📚</div>
+          <h4>Training Documentation</h4>
+          <p>HIPAA requires documented training for staff who access PHI. AI-specific training — approved tools, permitted data, incident reporting — must be added to HIPAA training records.</p>
+        </div>
+        <div class="hipaa-card">
+          <div class="hipaa-icon">🚨</div>
+          <h4>Breach Risk Assessment</h4>
+          <p>The 4-factor breach analysis applies to AI incidents the same as email misdirection. Organizations need a documented process for evaluating AI-related privacy events.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 12: GOVERNANCE INFRASTRUCTURE -->
+  <section class="slide" data-slide="12">
+    <div class="slide-inner">
+      <p class="eyebrow">Governance</p>
+      <h2>Building governance in 5 steps.</h2>
+      <p class="slide-lead">This isn't a 6-month project. It's a 60-day sprint with an ongoing owner.</p>
+      <div class="gov-steps">
+        <div class="gov-step">
+          <div class="gov-step-header">
+            <div class="gs-num">1</div>
+            <div class="gs-timeline">Week 1</div>
+          </div>
+          <h4>Inventory</h4>
+          <p>Survey staff on what AI tools they're currently using. Most organizations are surprised by the range already in use — without any policy.</p>
+        </div>
+        <div class="gov-step">
+          <div class="gov-step-header">
+            <div class="gs-num">2</div>
+            <div class="gs-timeline">Weeks 2–3</div>
+          </div>
+          <h4>Policy Draft</h4>
+          <p>Use the AI governance prompt (next slide) to draft your P&P. Have legal and compliance review. This takes days, not months.</p>
+        </div>
+        <div class="gov-step">
+          <div class="gov-step-header">
+            <div class="gs-num">3</div>
+            <div class="gs-timeline">Week 4</div>
+          </div>
+          <h4>Communicate</h4>
+          <p>Don't just post it to the intranet. Send an all-staff communication explaining why the policy exists and what it protects — them, not just the organization.</p>
+        </div>
+        <div class="gov-step">
+          <div class="gov-step-header">
+            <div class="gs-num">4</div>
+            <div class="gs-timeline">Month 2</div>
+          </div>
+          <h4>Train</h4>
+          <p>Add AI governance to new hire orientation and annual HIPAA training. Document completion. This is now a compliance requirement, not a suggestion.</p>
+        </div>
+        <div class="gov-step">
+          <div class="gov-step-header">
+            <div class="gs-num">5</div>
+            <div class="gs-timeline">Ongoing</div>
+          </div>
+          <h4>Monitor & Update</h4>
+          <p>Designate an owner. Set a <strong>quarterly</strong> review date — not annual. AI tools evolve faster than the calendar year.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 13: GOVERNANCE POLICY PROMPT -->
+  <section class="slide" data-slide="13">
+    <div class="slide-inner">
+      <p class="eyebrow">Governance · Live demo</p>
+      <h2>Your AI governance policy — in 15 minutes.</h2>
+      <p class="slide-lead">The most-needed compliance document in healthcare right now. Most organizations don't have it.</p>
+      <h3 class="section-h3">The governance policy prompt</h3>
+      <div class="prompt-box">
+"Draft a policy and procedure for AI tool use by clinical and administrative staff in a HIPAA-covered healthcare organization. Address: (1) approved tool tiers — consumer free, enterprise, HIPAA-eligible — and what data can and cannot be entered into each, (2) data classification — a table mapping PHI, PII, financial data, and public data to approved tool tiers, (3) staff training requirements before using enterprise AI tools, (4) incident reporting protocol for AI-related privacy events, (5) governance ownership and quarterly review process. Format: standard P&P with purpose, scope, policy statement, procedures, definitions, references, and effective date placeholder."
+      </div>
+      <div class="two-col mt">
+        <div class="insight-note">
+          <span class="insight-label">What you get:</span>
+          A review-ready AI governance policy. Outside counsel to write this from scratch: $5,000–$15,000. Your time using this prompt: 15 minutes.
+        </div>
+        <div class="tool-tease">
+          <span class="tease-label">Tools:</span>
+          <span class="tool-tag">Claude</span>
+          <span class="tool-tag">ChatGPT Enterprise</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 14: PILLAR 3 DIVIDER -->
+  <section class="slide slide-divider divider-roi" data-slide="14">
+    <div class="divider-content">
+      <div class="div-icon">📊</div>
+      <div>
+        <p class="div-eyebrow">Pillar 3</p>
+        <h2 class="div-title">ROI &amp; Business Case</h2>
+        <p class="div-sub">How to measure AI impact, prove value, and sustain organizational investment.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 15: WHAT ROI LOOKS LIKE -->
+  <section class="slide" data-slide="15">
+    <div class="slide-inner">
+      <p class="eyebrow">ROI</p>
+      <h2>Three types of AI return.</h2>
+      <p class="slide-lead">AI ROI isn't just time savings. Here's how to see the full picture.</p>
+      <div class="roi-three">
+        <div class="roi-card roi-1">
+          <div class="roi-icon">⏱</div>
+          <h4>Time Savings</h4>
+          <p class="roi-desc">The most measurable. Identify a task, clock the before, clock the after. Multiply by frequency and headcount.</p>
+          <div class="roi-example">
+            <div class="roi-ex-label">Example:</div>
+            5 managers × 3 hrs/wk on reporting → 30 min with AI = 12.5 hrs/week saved = <strong>$29K/year</strong> from one use case
+          </div>
+          <div class="roi-ease">Difficulty to measure: <span class="ease-low">Low</span></div>
+        </div>
+        <div class="roi-card roi-2">
+          <div class="roi-icon">✅</div>
+          <h4>Quality Improvement</h4>
+          <p class="roi-desc">Consistency of output, fewer revision cycles, improved audit readiness, reduction in compliance incidents.</p>
+          <div class="roi-example">
+            <div class="roi-ex-label">Example:</div>
+            Job postings reviewed and revised 3× before posting → reviewed once, posted same day. Recruiter time recovered = faster time-to-fill
+          </div>
+          <div class="roi-ease">Difficulty to measure: <span class="ease-med">Medium</span></div>
+        </div>
+        <div class="roi-card roi-3">
+          <div class="roi-icon">💰</div>
+          <h4>Revenue Protection &amp; Growth</h4>
+          <p class="roi-desc">No-show reduction, faster credentialing, more proposals submitted, improved retention and reduced turnover cost.</p>
+          <div class="roi-example">
+            <div class="roi-ex-label">Example:</div>
+            18% no-show rate → 12% = $200K–$400K revenue recovery for a 12-provider practice
+          </div>
+          <div class="roi-ease">Difficulty to measure: <span class="ease-high">High — but highest dollar value</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 16: TIME SAVINGS CALCULATOR -->
+  <section class="slide" data-slide="16">
+    <div class="slide-inner">
+      <p class="eyebrow">ROI</p>
+      <h2>The time savings calculator.</h2>
+      <p class="slide-lead">One formula. Any use case. Any role.</p>
+      <div class="calc-formula">
+        <div class="calc-part">(Time before − Time after)</div>
+        <div class="calc-op">×</div>
+        <div class="calc-part">Hourly rate</div>
+        <div class="calc-op">×</div>
+        <div class="calc-part">Frequency</div>
+        <div class="calc-op">=</div>
+        <div class="calc-result">Annual value</div>
+      </div>
+      <div class="two-col mt">
+        <div>
+          <h3 class="section-h3">Fully loaded hourly rates</h3>
+          <div class="rate-table">
+            <div class="rate-row"><span>RN</span><span>$55–$75/hr</span></div>
+            <div class="rate-row"><span>Manager / Coordinator</span><span>$40–$55/hr</span></div>
+            <div class="rate-row"><span>Director</span><span>$65–$90/hr</span></div>
+            <div class="rate-row"><span>Compliance Officer</span><span>$60–$80/hr</span></div>
+            <div class="rate-row rate-row-accent"><span>C-Suite</span><span>$150–$300/hr</span></div>
+          </div>
+        </div>
+        <div>
+          <h3 class="section-h3">Real examples</h3>
+          <div class="calc-example">
+            <div class="ce-label">10 DONs × 3 hrs/week admin saved</div>
+            <div class="ce-math">3 hrs × $80/hr × 52 wks × 10 DONs</div>
+            <div class="ce-result">= $124,800/year</div>
+          </div>
+          <div class="calc-example mt">
+            <div class="ce-label">10 compliance officers × 20 training modules updated</div>
+            <div class="ce-math">5 hrs saved per module × $70/hr × 200 modules</div>
+            <div class="ce-result">= $70,000/year</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 17: BUSINESS CASE -->
+  <section class="slide" data-slide="17">
+    <div class="slide-inner">
+      <p class="eyebrow">ROI · Live demo</p>
+      <h2>Build the business case in one session.</h2>
+      <p class="slide-lead">The hardest part of sustaining AI investment is translating what you've seen into language a board or CFO will act on.</p>
+      <h3 class="section-h3">The business case prompt</h3>
+      <div class="prompt-box">
+"Build an internal business case for investing in AI tools and training for our healthcare organization. We have [X] employees across [departments]. Our top 3 AI use cases and estimated time savings are: [describe]. Structure the business case with: (1) executive summary — problem and opportunity in 2 paragraphs, (2) current state cost analysis with time and dollar estimates per use case, (3) investment required — training, tools, implementation time, (4) projected ROI at 12 and 24 months, (5) risk analysis with mitigations, (6) recommendation and specific ask. Format for C-suite or board presentation."
+      </div>
+      <div class="insight-note mt">
+        <span class="insight-label">What this changes:</span>
+        AI adoption stops being a line item that gets cut and becomes a financial decision with quantified returns. The organizations that measure ROI keep investing. The ones that don't treat it as a cost and cut it when budgets tighten.
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 18: ROI STORY PROMPT -->
+  <section class="slide" data-slide="18">
+    <div class="slide-inner">
+      <p class="eyebrow">ROI</p>
+      <h2>Tell the story at 90 days.</h2>
+      <p class="slide-lead">Numbers without narrative don't change minds. This prompt turns your 90-day metrics into a story your leadership will remember.</p>
+      <h3 class="section-h3">The 90-day progress report prompt</h3>
+      <div class="prompt-box">
+"I manage AI adoption for our organization. Over the past 90 days: [describe adoption rate, key use cases deployed, time savings measured]. Write a 1-page progress report for our leadership team. Tell a story — not just data. Emphasize: (1) the human impact — what our people are doing with the time they've recovered, (2) the business impact — cost savings, quality improvements, specific wins, (3) what we're building toward in the next 90 days. Tone: confident, evidence-based, forward-looking."
+      </div>
+      <div class="metrics-box mt">
+        <div class="mb-label">Track these monthly to feed your story:</div>
+        <div class="metrics-grid">
+          <div class="metric-item"><div class="mi-icon">👥</div><div>Staff using AI 3×/week<br><span>Adoption rate</span></div></div>
+          <div class="metric-item"><div class="mi-icon">⏱</div><div>Hours saved per dept/mo<br><span>Productivity</span></div></div>
+          <div class="metric-item"><div class="mi-icon">💡</div><div>New use cases identified<br><span>Innovation velocity</span></div></div>
+          <div class="metric-item"><div class="mi-icon">🔒</div><div>AI compliance incidents<br><span>Risk score</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 19: CAPSTONE -->
+  <section class="slide slide-capstone" data-slide="19">
+    <div class="slide-inner">
+      <p class="eyebrow">Capstone</p>
+      <h2>Your 90-Day AI Readiness Blueprint.</h2>
+      <p class="slide-lead">This is the artifact that turns four modules of training into organizational action.</p>
+      <div class="blueprint-grid">
+        <div class="bp-card bp-a">
+          <div class="bp-num">1</div>
+          <h4>Top 3 Use Cases</h4>
+          <p>From your personal use case map in Module 3 — which three will you deploy in your organization in the next 90 days?</p>
+          <div class="bp-prompt">Write them down. Assign an owner to each.</div>
+        </div>
+        <div class="bp-card bp-b">
+          <div class="bp-num">2</div>
+          <h4>One Governance Action</h4>
+          <p>What's the single most important governance step your organization needs to take in the next 30 days?</p>
+          <div class="bp-prompt">Inventory? Policy draft? Staff communication?</div>
+        </div>
+        <div class="bp-card bp-c">
+          <div class="bp-num">3</div>
+          <h4>One Champion to Activate</h4>
+          <p>Who in your organization rates themselves 4–5 on sharing AI with their team? Name them.</p>
+          <div class="bp-prompt">Schedule a 30-minute conversation this week.</div>
+        </div>
+        <div class="bp-card bp-d">
+          <div class="bp-num">4</div>
+          <h4>One Metric to Track</h4>
+          <p>What will you measure to prove AI is delivering value? Time saved? Adoption rate? A specific cost reduced?</p>
+          <div class="bp-prompt">Start measuring now — before the next 90 days begin.</div>
+        </div>
+      </div>
+      <div class="blueprint-prompt-box">
+        <span class="bpp-label">Build your blueprint with AI:</span>
+        "I just completed a 4-module AI training curriculum. Help me build a 90-day AI readiness blueprint for my organization. Ask me about my role, my team, the top use cases I identified, and my current governance situation. Then create a structured one-page plan I can present to my leadership."
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 20: CLOSE -->
+  <section class="slide slide-close" data-slide="20">
+    <div class="slide-inner centered">
+      <p class="eyebrow">End of Module 4</p>
+      <h2>The 3P Framework — complete.</h2>
+      <p class="slide-lead">This is where the curriculum closes. Four modules. One system.</p>
+      <div class="three-p-final">
+        <div class="tpf-card tpf-p">
+          <div class="tpf-letter">P</div>
+          <h4>Products</h4>
+          <p>The AI tools — what they do, how to choose them, how to use them safely. <em>Modules 1 &amp; 2.</em></p>
+        </div>
+        <div class="tpf-arrow">→</div>
+        <div class="tpf-card tpf-p2">
+          <div class="tpf-letter">P</div>
+          <h4>People</h4>
+          <p>Your team's time — where it goes now, where it should go, and the skills to make the shift. <em>Module 3.</em></p>
+        </div>
+        <div class="tpf-arrow">→</div>
+        <div class="tpf-card tpf-p3">
+          <div class="tpf-letter">P</div>
+          <h4>Process</h4>
+          <p>The workflows, governance, champions, and measurement systems that make change durable. <em>Module 4.</em></p>
+        </div>
+      </div>
+      <div class="close-final-note">
+        <p><strong>The organizations that win with AI</strong> aren't the ones with the most sophisticated tools. They're the ones that changed how they work — and built the infrastructure to keep it changed.</p>
+      </div>
+      <div class="module-nav-box">
+        <p>You've completed the KEDAL Solutions AI Business Training Curriculum. Contact <strong>Teacher Scott</strong> to discuss custom implementation support, follow-up coaching, or organization-specific training tracks.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="controls">
+  <button class="ctrl-btn" id="prevBtn" onclick="prevSlide()">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+  </button>
+  <div class="dot-nav" id="dotNav"></div>
+  <button class="ctrl-btn" id="nextBtn" onclick="nextSlide()">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+  </button>
+</div>
+
+<button class="fac-toggle" onclick="toggleFacPanel()">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+</button>
+<div class="fac-panel" id="facPanel">
+  <div class="fac-panel-header">
+    <h3>Facilitator Notes</h3>
+    <button onclick="toggleFacPanel()">✕</button>
+  </div>
+  <div class="fac-panel-body" id="facPanelBody"></div>
+</div>
+<div class="kbd-hint"><span class="kbd">←</span><span class="kbd">→</span> navigate &nbsp;|&nbsp; <span class="kbd">F</span> notes</div>
+
+<script src="app.js"></script>
+</body>
+</html>

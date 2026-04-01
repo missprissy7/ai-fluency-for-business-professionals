@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Rules Changed — AI Business Training</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- NAV BAR -->
+<nav class="nav" id="nav">
+  <div class="nav-left">
+    <svg class="logo" viewBox="0 0 40 40" fill="none" aria-label="KEDAL Solutions">
+      <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
+      <path d="M13 13 L13 27 M13 20 L22 13 M13 20 L22 27" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="28" cy="20" r="4" fill="currentColor" opacity="0.7"/>
+    </svg>
+    <span class="nav-title">The Rules Changed</span>
+  </div>
+  <div class="nav-right">
+    <span class="slide-counter" id="slideCounter">1 / 18</span>
+    <button class="theme-btn" data-theme-toggle aria-label="Switch theme">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- PROGRESS BAR -->
+<div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+
+<!-- SLIDE CONTAINER -->
+<main class="deck" id="deck">
+
+  <!-- SLIDE 1: COVER -->
+  <section class="slide slide-cover active" data-slide="1">
+    <div class="cover-bg"></div>
+    <div class="cover-content">
+      <p class="cover-eyebrow">AI Business Training — Module 1</p>
+      <h1 class="cover-title">The Rules<br><em>Changed.</em></h1>
+      <p class="cover-sub">How AI rewrites the economics of every business — and what to do about it.</p>
+      <div class="cover-meta">
+        <span>Teacher Scott</span>
+        <span class="dot">·</span>
+        <span>KEDAL Solutions</span>
+      </div>
+    </div>
+    <div class="cover-nav">
+      <button class="btn-next" onclick="nextSlide()">Begin <span class="arrow">→</span></button>
+    </div>
+  </section>
+
+  <!-- SLIDE 2: AGENDA -->
+  <section class="slide" data-slide="2">
+    <div class="slide-inner">
+      <p class="eyebrow">What we're covering today</p>
+      <h2>Two halves. One transformation.</h2>
+      <div class="two-col gap-lg">
+        <div class="agenda-block">
+          <div class="agenda-num">01</div>
+          <h3>The Foundation</h3>
+          <p>Understanding why AI has fundamentally changed the economics of business — and what that means for your competitive position.</p>
+          <ul class="agenda-list">
+            <li>The diamond-to-sand shift</li>
+            <li>What used to be expensive</li>
+            <li>Domain-specific examples</li>
+            <li>Hallucinations &amp; security</li>
+          </ul>
+        </div>
+        <div class="agenda-block">
+          <div class="agenda-num">02</div>
+          <h3>The Framework</h3>
+          <p>A sequenced, practical model for how your organization responds — and how to actually execute it.</p>
+          <ul class="agenda-list">
+            <li>Products: AI-infused tools</li>
+            <li>People: the bandwidth gap</li>
+            <li>Process: reinventing workflows</li>
+            <li>Your next 30 days</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 3: THE DIAMOND ANALOGY -->
+  <section class="slide" data-slide="3">
+    <div class="slide-inner centered">
+      <p class="eyebrow">The core insight</p>
+      <div class="diamond-frame">
+        <div class="diamond-left">
+          <div class="gem gem-rare">💎</div>
+          <p class="gem-label">Before AI</p>
+          <p class="gem-desc">Diamonds: rare, expensive, valuable</p>
+        </div>
+        <div class="diamond-arrow">→</div>
+        <div class="diamond-right">
+          <div class="gem gem-common">🪨🪨🪨🪨🪨🪨🪨🪨🪨</div>
+          <p class="gem-label">After AI</p>
+          <p class="gem-desc">Diamonds: everywhere, cheap, ordinary</p>
+        </div>
+      </div>
+      <blockquote class="pull-quote">
+        "If diamonds suddenly became like sand — available to everyone — no one would pay a lot for diamonds anymore."
+      </blockquote>
+      <p class="slide-body">This is not a metaphor about technology. It is a statement about <strong>economic value</strong>. AI has collapsed the cost of producing things that used to require significant time, skill, or money.</p>
+    </div>
+  </section>
+
+  <!-- SLIDE 4: WHAT THIS MEANS -->
+  <section class="slide" data-slide="4">
+    <div class="slide-inner">
+      <p class="eyebrow">The implication</p>
+      <h2>What does this mean for your business?</h2>
+      <p class="slide-lead">Any part of your business built on the <em>scarcity</em> of a skill or the <em>cost</em> of a task is now at risk.</p>
+      <div class="three-col">
+        <div class="card card-warn">
+          <div class="card-icon">⚠️</div>
+          <h4>Pricing Risk</h4>
+          <p>You're charging based on effort that AI now eliminates. Clients will notice.</p>
+        </div>
+        <div class="card card-warn">
+          <div class="card-icon">⚠️</div>
+          <h4>Workflow Risk</h4>
+          <p>Your processes were designed around human speed. They're now artificially slow.</p>
+        </div>
+        <div class="card card-opportunity">
+          <div class="card-icon">✦</div>
+          <h4>Opportunity</h4>
+          <p>Organizations that adapt get to do more, serve more, and compete differently.</p>
+        </div>
+      </div>
+      <p class="slide-note">Not eventually — <strong>now.</strong> Your competitors are already making this decision.</p>
+    </div>
+  </section>
+
+  <!-- SLIDE 5: HEALTHCARE CLINICAL EXAMPLES -->
+  <section class="slide" data-slide="5">
+    <div class="slide-inner">
+      <p class="eyebrow">Healthcare — Clinical Documentation</p>
+      <h2>What used to cost a lot</h2>
+      <div class="example-table">
+        <div class="table-header">
+          <span>Task</span><span>Before AI</span><span>With AI</span><span>Impact</span>
+        </div>
+        <div class="table-row">
+          <span class="task-name">Clinical note writing</span>
+          <span class="before">15–25 min/patient</span>
+          <span class="after">2–3 min</span>
+          <span class="impact">See more patients or reduce burnout</span>
+        </div>
+        <div class="table-row">
+          <span class="task-name">Prior auth letters</span>
+          <span class="before">45–90 min/case</span>
+          <span class="after">Draft in seconds</span>
+          <span class="impact">4–5× more cases per coordinator</span>
+        </div>
+        <div class="table-row">
+          <span class="task-name">Discharge summaries</span>
+          <span class="before">20–40 min, physician</span>
+          <span class="after">&lt;2 min from EHR</span>
+          <span class="impact">Faster discharge, less physician admin</span>
+        </div>
+        <div class="table-row">
+          <span class="task-name">Patient education materials</span>
+          <span class="before">$500–$2,000/doc</span>
+          <span class="after">Personalized in minutes</span>
+          <span class="impact">Better health literacy, near-zero cost</span>
+        </div>
+        <div class="table-row">
+          <span class="task-name">Medical coding review</span>
+          <span class="before">$25–$45/hr, specialist</span>
+          <span class="after">AI-assisted, human reviews</span>
+          <span class="impact">3–5× throughput increase</span>
+        </div>
+      </div>
+      <div class="tool-tease">
+        <span class="tease-label">Tools to show:</span>
+        <span class="tool-tag">Nuance DAX</span>
+        <span class="tool-tag">Ambience Healthcare</span>
+        <span class="tool-tag">Suki AI</span>
+        <span class="tool-tag">Abridge</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 6: STAFFING EXAMPLES -->
+  <section class="slide" data-slide="6">
+    <div class="slide-inner">
+      <p class="eyebrow">Healthcare — Staffing &amp; Workforce</p>
+      <h2>What used to require a specialist</h2>
+      <div class="example-table">
+        <div class="table-header">
+          <span>Task</span><span>Before AI</span><span>With AI</span><span>Impact</span>
+        </div>
+        <div class="table-row">
+          <span class="task-name">Job description writing</span>
+          <span class="before">1–2 hrs, HR staff</span>
+          <span class="after">3–5 min</span>
+          <span class="impact">Post 10× more roles, same headcount</span>
+        </div>
+        <div class="table-row">
+          <span class="task-name">Resume screening</span>
+          <span class="before">Manual, 50–200 resumes</span>
+          <span class="after">Ranked in seconds</span>
+          <span class="impact">Days to hours, time-to-shortlist</span>
+        </div>
+        <div class="table-row">
+          <span class="task-name">Onboarding documents</span>
+          <span class="before">HR builds per-role packets</span>
+          <span class="after">Generated instantly</span>
+          <span class="impact">Consistency up, admin time down</span>
+        </div>
+        <div class="table-row">
+          <span class="task-name">Shift scheduling</span>
+          <span class="before">3–5 hrs/week, spreadsheets</span>
+          <span class="after">AI-optimized with constraints</span>
+          <span class="impact">Errors and overtime costs decrease</span>
+        </div>
+        <div class="table-row">
+          <span class="task-name">Credentialing tracking</span>
+          <span class="before">Manual follow-up, multi-source</span>
+          <span class="after">AI-monitored with alerts</span>
+          <span class="impact">Compliance gaps caught earlier</span>
+        </div>
+      </div>
+      <div class="tool-tease">
+        <span class="tease-label">Tools to show:</span>
+        <span class="tool-tag">Paradox (Olivia)</span>
+        <span class="tool-tag">QGenda</span>
+        <span class="tool-tag">Shiftboard</span>
+        <span class="tool-tag">Rippling AI</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 7: COMPLIANCE EXAMPLES -->
+  <section class="slide" data-slide="7">
+    <div class="slide-inner">
+      <p class="eyebrow">Healthcare — Compliance &amp; Operations</p>
+      <h2>What used to require lawyers and consultants</h2>
+      <div class="example-table">
+        <div class="table-header">
+          <span>Task</span><span>Before AI</span><span>With AI</span><span>Impact</span>
+        </div>
+        <div class="table-row">
+          <span class="task-name">Policy &amp; procedure writing</span>
+          <span class="before">Days, compliance + legal</span>
+          <span class="after">AI drafts, reviewed in hours</span>
+          <span class="impact">P&P library stays current cheaply</span>
+        </div>
+        <div class="table-row">
+          <span class="task-name">HIPAA training content</span>
+          <span class="before">$5K–$20K/yr, vendor</span>
+          <span class="after">Custom-generated in-house</span>
+          <span class="impact">More relevant, cost → near zero</span>
+        </div>
+        <div class="table-row">
+          <span class="task-name">Contract review</span>
+          <span class="before">$300–$500/hr, outside counsel</span>
+          <span class="after">AI flags risk, attorney reviews</span>
+          <span class="impact">Legal cost per contract down 60–80%</span>
+        </div>
+        <div class="table-row">
+          <span class="task-name">Audit prep</span>
+          <span class="before">Weeks of manual file-pulling</span>
+          <span class="after">AI organizes &amp; cross-references</span>
+          <span class="impact">Audit readiness is now continuous</span>
+        </div>
+        <div class="table-row">
+          <span class="task-name">RFP / grant writing</span>
+          <span class="before">40–80 hrs, consultant or staff</span>
+          <span class="after">AI drafts from org data</span>
+          <span class="impact">More proposals, faster iteration</span>
+        </div>
+      </div>
+      <div class="tool-tease">
+        <span class="tease-label">Tools to show:</span>
+        <span class="tool-tag">Harvey AI</span>
+        <span class="tool-tag">ContractPodAi</span>
+        <span class="tool-tag">Notion AI</span>
+        <span class="tool-tag">Perplexity</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 8: PHARMA ADJACENT -->
+  <section class="slide" data-slide="8">
+    <div class="slide-inner">
+      <p class="eyebrow">Healthcare-Adjacent — Pharma &amp; Health Tech</p>
+      <h2>It goes beyond the clinic</h2>
+      <div class="two-col">
+        <div>
+          <h3 class="section-h3">Pharma &amp; Life Sciences</h3>
+          <div class="mini-table">
+            <div class="mini-row"><span>Clinical trial protocol summaries</span><span class="was">$150–$300/hr medical writer</span></div>
+            <div class="mini-row"><span>Adverse event narratives</span><span class="was">Specialized PV staff</span></div>
+            <div class="mini-row"><span>Regulatory submission formatting</span><span class="was">Days, regulatory affairs specialist</span></div>
+            <div class="mini-row"><span>Literature reviews</span><span class="was">Research team, weeks</span></div>
+          </div>
+          <div class="tool-tease">
+            <span class="tool-tag">BenchSci</span>
+            <span class="tool-tag">Elicit</span>
+            <span class="tool-tag">Scite</span>
+          </div>
+        </div>
+        <div>
+          <h3 class="section-h3">Health Tech &amp; Digital Health</h3>
+          <div class="mini-table">
+            <div class="mini-row"><span>Product requirements docs</span><span class="was">PM, 1–2 days per PRD</span></div>
+            <div class="mini-row"><span>User research synthesis</span><span class="was">Researcher, 2–5 days/study</span></div>
+            <div class="mini-row"><span>Marketing copy</span><span class="was">Specialized healthcare copywriter</span></div>
+            <div class="mini-row"><span>Competitive landscape</span><span class="was">Analyst, 1–2 weeks</span></div>
+          </div>
+          <div class="tool-tease">
+            <span class="tool-tag">Perplexity</span>
+            <span class="tool-tag">Claude</span>
+            <span class="tool-tag">Gamma</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 9: OBJECTION — HALLUCINATIONS -->
+  <section class="slide slide-objection" data-slide="9">
+    <div class="slide-inner">
+      <div class="objection-header">
+        <div class="objection-badge">Objection 01</div>
+        <h2>"What about<br>hallucinations?"</h2>
+        <p class="slide-lead">Yes. AI makes things up. Here's how to think about it.</p>
+      </div>
+      <div class="four-col">
+        <div class="card">
+          <div class="card-num">01</div>
+          <h4>First draft, not final</h4>
+          <p>Every AI output is a starting point. Professional judgment shifts from generation to verification.</p>
+        </div>
+        <div class="card">
+          <div class="card-num">02</div>
+          <h4>Use domain-specific tools</h4>
+          <p>Nuance DAX is trained on millions of clinical encounters. Match the tool to the task.</p>
+        </div>
+        <div class="card">
+          <div class="card-num">03</div>
+          <h4>Structure reduces risk</h4>
+          <p>Give AI a template to fill, a source to summarize, or a format to follow. Open-ended generation is where risk is highest.</p>
+        </div>
+        <div class="card">
+          <div class="card-num">04</div>
+          <h4>This isn't new</h4>
+          <p>Junior employees make things up. Consultants pad reports. The difference is speed. Your job is to build review into the workflow.</p>
+        </div>
+      </div>
+      <div class="facilitator-box">
+        <span class="fac-label">💬 Facilitator prompt:</span>
+        "How many of you have reviewed a document written by a human and found errors? Same workflow. AI just drafts faster."
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 10: OBJECTION — SECURITY -->
+  <section class="slide slide-objection" data-slide="10">
+    <div class="slide-inner">
+      <div class="objection-header">
+        <div class="objection-badge">Objection 02</div>
+        <h2>"What about<br>our data security?"</h2>
+        <p class="slide-lead">The right question. The answer depends entirely on <em>which</em> tool and <em>how</em> it's configured.</p>
+      </div>
+      <div class="security-table">
+        <div class="sec-header">
+          <span>Tier</span><span>Examples</span><span>Data Handling</span><span>Use For</span>
+        </div>
+        <div class="sec-row sec-red">
+          <span class="tier-badge tier-red">Consumer Free</span>
+          <span>ChatGPT free, Claude free</span>
+          <span>May be used for training</span>
+          <span>Zero PHI, zero proprietary data</span>
+        </div>
+        <div class="sec-row sec-yellow">
+          <span class="tier-badge tier-yellow">Consumer Paid</span>
+          <span>ChatGPT Plus</span>
+          <span>Limited protections, not HIPAA</span>
+          <span>General drafting only</span>
+        </div>
+        <div class="sec-row sec-blue">
+          <span class="tier-badge tier-blue">Enterprise</span>
+          <span>Copilot 365, Claude for Enterprise</span>
+          <span>Not used for training, SLAs</span>
+          <span>Business ops, internal docs</span>
+        </div>
+        <div class="sec-row sec-green">
+          <span class="tier-badge tier-green">HIPAA-Eligible</span>
+          <span>Azure OpenAI, Nuance DAX</span>
+          <span>BAA available, HIPAA-compliant</span>
+          <span>Clinical documentation, PHI workflows</span>
+        </div>
+        <div class="sec-row sec-teal">
+          <span class="tier-badge tier-teal">On-Premise</span>
+          <span>Self-hosted Llama, Mistral</span>
+          <span>Data never leaves your environment</span>
+          <span>Highest sensitivity: PHI, research</span>
+        </div>
+      </div>
+      <div class="facilitator-box">
+        <span class="fac-label">💬 Key message:</span>
+        The tool isn't insecure. Using the wrong tier for the wrong use case is what creates risk. Extend your existing data classification policy to AI.
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 11: 3P FRAMEWORK INTRO -->
+  <section class="slide slide-framework" data-slide="11">
+    <div class="slide-inner centered">
+      <p class="eyebrow">The response</p>
+      <h2>Most organizations get this wrong</h2>
+      <div class="wrong-ways">
+        <div class="wrong-card">❌ <strong>Ignore it.</strong> "We'll wait and see." <em>(Your competitors aren't waiting.)</em></div>
+        <div class="wrong-card">❌ <strong>Over-invest in tools.</strong> "We got everyone Copilot." <em>(Then what?)</em></div>
+        <div class="wrong-card">❌ <strong>Mandate without support.</strong> "Use AI in your work." <em>(How? When? For what?)</em></div>
+      </div>
+      <div class="framework-reveal">
+        <p class="eyebrow">The right path is sequenced:</p>
+        <div class="three-p">
+          <div class="p-block">
+            <div class="p-letter">P</div>
+            <div class="p-word">Products</div>
+          </div>
+          <div class="p-arrow">→</div>
+          <div class="p-block">
+            <div class="p-letter">P</div>
+            <div class="p-word">People</div>
+          </div>
+          <div class="p-arrow">→</div>
+          <div class="p-block">
+            <div class="p-letter">P</div>
+            <div class="p-word">Process</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 12: P1 PRODUCTS -->
+  <section class="slide" data-slide="12">
+    <div class="slide-inner">
+      <div class="p-header">
+        <div class="p-badge">P1</div>
+        <div>
+          <p class="eyebrow">First</p>
+          <h2>Products</h2>
+          <p class="slide-lead">Replace your tools with AI-infused versions.</p>
+        </div>
+      </div>
+      <p class="slide-body">For every tool your team currently uses, ask: <em>"Is there an AI-infused version of this?"</em></p>
+      <div class="tool-grid">
+        <div class="tool-row">
+          <span class="tool-category">Documentation</span>
+          <span class="tool-old">Word / Google Docs</span>
+          <span class="tool-arrow">→</span>
+          <span class="tool-new">Notion AI, Copilot in Word</span>
+        </div>
+        <div class="tool-row">
+          <span class="tool-category">Meetings</span>
+          <span class="tool-old">Manual notes / EA</span>
+          <span class="tool-arrow">→</span>
+          <span class="tool-new">Otter.ai, Fireflies, Teams transcription</span>
+        </div>
+        <div class="tool-row">
+          <span class="tool-category">Scheduling</span>
+          <span class="tool-old">Manual calendars</span>
+          <span class="tool-arrow">→</span>
+          <span class="tool-new">Reclaim.ai, Motion, QGenda</span>
+        </div>
+        <div class="tool-row">
+          <span class="tool-category">Research</span>
+          <span class="tool-old">Manual web search</span>
+          <span class="tool-arrow">→</span>
+          <span class="tool-new">Perplexity, Consensus (clinical)</span>
+        </div>
+        <div class="tool-row">
+          <span class="tool-category">Presentations</span>
+          <span class="tool-old">PowerPoint (manual)</span>
+          <span class="tool-arrow">→</span>
+          <span class="tool-new">Gamma, Copilot in PowerPoint</span>
+        </div>
+        <div class="tool-row">
+          <span class="tool-category">Clinical documentation</span>
+          <span class="tool-old">Manual EHR entry</span>
+          <span class="tool-arrow">→</span>
+          <span class="tool-new">Nuance DAX, Ambience, Suki AI</span>
+        </div>
+      </div>
+      <p class="slide-note">Make <em>"does this have an AI-infused version?"</em> a standard procurement question.</p>
+    </div>
+  </section>
+
+  <!-- SLIDE 13: P2 PEOPLE -->
+  <section class="slide" data-slide="13">
+    <div class="slide-inner">
+      <div class="p-header">
+        <div class="p-badge p-badge-2">P2</div>
+        <div>
+          <p class="eyebrow">Second — and most overlooked</p>
+          <h2>People</h2>
+          <p class="slide-lead">Bandwidth is not optional.</p>
+        </div>
+      </div>
+      <blockquote class="pull-quote-sm">
+        "They go and get everybody access to the tools, but they don't give them the time it takes to sit down and use a ChatGPT for work. This is what most companies screw up."
+      </blockquote>
+      <div class="bandwidth-ladder">
+        <div class="rung rung-dead">
+          <span class="rung-level">Access</span>
+          <span class="rung-desc">Employee has a login</span>
+          <span class="rung-time">0 hrs practice</span>
+        </div>
+        <div class="rung rung-low">
+          <span class="rung-level">Awareness</span>
+          <span class="rung-desc">Employee has seen a demo</span>
+          <span class="rung-time">1–2 hrs total</span>
+        </div>
+        <div class="rung rung-mid">
+          <span class="rung-level">Experimentation</span>
+          <span class="rung-desc">Tried it on their own work</span>
+          <span class="rung-time">5–10 hrs</span>
+        </div>
+        <div class="rung rung-high">
+          <span class="rung-level">Fluency</span>
+          <span class="rung-desc">AI is part of daily workflow</span>
+          <span class="rung-time">20–40 hrs practice</span>
+        </div>
+        <div class="rung rung-top">
+          <span class="rung-level">Amplification</span>
+          <span class="rung-desc">Redesigning work around AI</span>
+          <span class="rung-time">Ongoing</span>
+        </div>
+      </div>
+      <p class="slide-note highlight-note">Most organizations stop at <strong>Access</strong> and wonder why adoption is low.</p>
+    </div>
+  </section>
+
+  <!-- SLIDE 14: PEOPLE — ROI ARGUMENT -->
+  <section class="slide" data-slide="14">
+    <div class="slide-inner centered">
+      <p class="eyebrow">For the skeptical executive</p>
+      <h2>The ROI of giving people time</h2>
+      <div class="roi-calc">
+        <div class="roi-block">
+          <div class="roi-num">5 hrs</div>
+          <p>saved per week per employee using AI tools</p>
+        </div>
+        <div class="roi-x">×</div>
+        <div class="roi-block">
+          <div class="roi-num">52 wks</div>
+          <p>in a year</p>
+        </div>
+        <div class="roi-equals">=</div>
+        <div class="roi-block roi-result">
+          <div class="roi-num">260 hrs</div>
+          <p>$7,500 in labor value returned (at $60K/yr employee)</p>
+        </div>
+      </div>
+      <div class="roi-divider"></div>
+      <div class="roi-cost">
+        <p>Cost of 2 hrs/week protected learning time over 3 months:</p>
+        <div class="roi-cost-num">24 hours = ~$693</div>
+      </div>
+      <div class="roi-return">
+        <span class="roi-return-label">Return:</span>
+        <span class="roi-return-val">10× in year one</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 15: P3 PROCESS -->
+  <section class="slide" data-slide="15">
+    <div class="slide-inner">
+      <div class="p-header">
+        <div class="p-badge p-badge-3">P3</div>
+        <div>
+          <p class="eyebrow">Third — where the transformation lives</p>
+          <h2>Process</h2>
+          <p class="slide-lead">Now you reinvent how work gets done.</p>
+        </div>
+      </div>
+      <p class="slide-body">Tools + fluency only unlock value if workflows change. If you keep every process the same, you've added a tool to a broken process.</p>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-num">1</div>
+          <h4>Map current state</h4>
+          <p>How work actually gets done (not the org chart version)</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="process-step">
+          <div class="step-num">2</div>
+          <h4>Find AI insertion points</h4>
+          <p>Where is a human doing something AI can do faster?</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="process-step">
+          <div class="step-num">3</div>
+          <h4>Redesign</h4>
+          <p>Eliminate, automate, or augment. Human role → judgment &amp; relationship.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="process-step">
+          <div class="step-num">4</div>
+          <h4>Pilot &amp; measure</h4>
+          <p>One team first. Measure time, quality, adoption.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="process-step">
+          <div class="step-num">5</div>
+          <h4>Codify &amp; scale</h4>
+          <p>Document the new process as the standard. Train everyone.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 16: PROCESS — HEALTHCARE EXAMPLE -->
+  <section class="slide" data-slide="16">
+    <div class="slide-inner">
+      <p class="eyebrow">Process in action — Healthcare example</p>
+      <h2>Prior Authorization: Before &amp; After</h2>
+      <div class="before-after">
+        <div class="ba-col ba-before">
+          <div class="ba-label">Before</div>
+          <div class="ba-flow">
+            <div class="flow-step">Denial received</div>
+            <div class="flow-down">↓</div>
+            <div class="flow-step flow-pain">Manual appeal letter<br><small>45–90 min, clinical staff</small></div>
+            <div class="flow-down">↓</div>
+            <div class="flow-step">Submit</div>
+            <div class="flow-down">↓</div>
+            <div class="flow-step flow-pain">Manual follow-up</div>
+          </div>
+        </div>
+        <div class="ba-vs">→</div>
+        <div class="ba-col ba-after">
+          <div class="ba-label">After</div>
+          <div class="ba-flow">
+            <div class="flow-step">Denial received</div>
+            <div class="flow-down">↓</div>
+            <div class="flow-step flow-ai">AI drafts appeal from clinical notes<br><small>2 min</small></div>
+            <div class="flow-down">↓</div>
+            <div class="flow-step flow-human">Staff reviews &amp; edits<br><small>5–10 min</small></div>
+            <div class="flow-down">↓</div>
+            <div class="flow-step">Submit</div>
+            <div class="flow-down">↓</div>
+            <div class="flow-step flow-ai">AI monitors, flags for follow-up</div>
+          </div>
+        </div>
+      </div>
+      <div class="ba-result">
+        <strong>Result:</strong> Coordinator handles 4–5× more cases. Appeal quality improves. Burnout from repetitive writing decreases.
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 17: CHANGE MANAGEMENT -->
+  <section class="slide" data-slide="17">
+    <div class="slide-inner">
+      <p class="eyebrow">Process — The human side</p>
+      <h2>Where resistance lives</h2>
+      <p class="slide-lead">People don't resist AI tools. They resist change to their routines, roles, and sense of competence.</p>
+      <div class="two-col">
+        <div>
+          <h3 class="section-h3">Common pushback — and what it really means</h3>
+          <div class="pushback-list">
+            <div class="pushback">
+              <span class="pb-quote">"Our org would never allow this."</span>
+              <span class="pb-answer">→ There's a security concern. Walk through the tier framework.</span>
+            </div>
+            <div class="pushback">
+              <span class="pb-quote">"We tried it and it was wrong."</span>
+              <span class="pb-answer">→ Wrong tool for the task. Let's look at what they used it for.</span>
+            </div>
+            <div class="pushback">
+              <span class="pb-quote">"This will eliminate jobs."</span>
+              <span class="pb-answer">→ It eliminates tasks within jobs. The risk is being the org that didn't adapt.</span>
+            </div>
+            <div class="pushback">
+              <span class="pb-quote">"We're too regulated."</span>
+              <span class="pb-answer">→ Regulated industries have the most to gain. Show them HIPAA-eligible options.</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3 class="section-h3">What actually moves people</h3>
+          <ul class="change-list">
+            <li>Communicate the <em>why</em> before the <em>what</em></li>
+            <li>Involve people in the workflow redesign</li>
+            <li>Name the fear directly — don't minimize it</li>
+            <li>Celebrate early wins publicly</li>
+            <li>Leadership has to model it first</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 18: CLOSE / NEXT 30 DAYS -->
+  <section class="slide slide-close" data-slide="18">
+    <div class="slide-inner centered">
+      <p class="eyebrow">Your action plan</p>
+      <h2>The next 30 days</h2>
+      <div class="action-steps">
+        <div class="action-step">
+          <div class="action-week">Week 1</div>
+          <h4>Audit your tools</h4>
+          <p>List every tool your team uses. For each one, ask: is there an AI-infused version?</p>
+        </div>
+        <div class="action-step">
+          <div class="action-week">Week 2</div>
+          <h4>Find one insertion point</h4>
+          <p>What task does your team do every week that feels like a chore? That's your first AI pilot.</p>
+        </div>
+        <div class="action-step">
+          <div class="action-week">Week 3</div>
+          <h4>Give people 2 hours</h4>
+          <p>Block protected time. Not a deliverable — just exploration. See what they discover.</p>
+        </div>
+        <div class="action-step">
+          <div class="action-week">Week 4</div>
+          <h4>Map one process</h4>
+          <p>Take one workflow and draw it. Mark every step AI could do. Redesign it.</p>
+        </div>
+      </div>
+      <div class="close-tagline">
+        <p>The organizations that win won't be the ones with the best AI.</p>
+        <p><strong>They'll be the ones who learned first.</strong></p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- SLIDE CONTROLS -->
+<div class="controls" id="controls">
+  <button class="ctrl-btn" id="prevBtn" onclick="prevSlide()" aria-label="Previous slide">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+  </button>
+  <div class="dot-nav" id="dotNav"></div>
+  <button class="ctrl-btn" id="nextBtn" onclick="nextSlide()" aria-label="Next slide">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+  </button>
+</div>
+
+<!-- FACILITATOR PANEL TOGGLE -->
+<button class="fac-toggle" id="facToggle" onclick="toggleFacPanel()" title="Toggle facilitator notes">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+</button>
+
+<div class="fac-panel" id="facPanel">
+  <div class="fac-panel-header">
+    <h3>Facilitator Notes</h3>
+    <button onclick="toggleFacPanel()">✕</button>
+  </div>
+  <div class="fac-panel-body" id="facPanelBody"></div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

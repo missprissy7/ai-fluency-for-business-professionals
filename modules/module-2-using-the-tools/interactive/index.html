@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Using the Tools — AI Business Training Module 2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-left">
+    <svg class="logo" viewBox="0 0 40 40" fill="none" aria-label="KEDAL Solutions">
+      <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
+      <path d="M13 13 L13 27 M13 20 L22 13 M13 20 L22 27" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="28" cy="20" r="4" fill="currentColor" opacity="0.7"/>
+    </svg>
+    <span class="nav-title">Using the Tools</span>
+    <span class="nav-module-badge">Module 2</span>
+  </div>
+  <div class="nav-right">
+    <span class="slide-counter" id="slideCounter">1 / 18</span>
+    <button class="theme-btn" data-theme-toggle aria-label="Switch theme">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </div>
+</nav>
+
+<div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+
+<main class="deck" id="deck">
+
+  <!-- SLIDE 1: COVER -->
+  <section class="slide slide-cover active" data-slide="1">
+    <div class="cover-bg"></div>
+    <div class="cover-content">
+      <p class="cover-eyebrow">AI Business Training — Module 2</p>
+      <h1 class="cover-title">Using the<br><em>Tools.</em></h1>
+      <p class="cover-sub">How to talk to AI and get what you actually need — every time.</p>
+      <div class="cover-meta">
+        <span>Teacher Scott</span><span class="dot">·</span><span>KEDAL Solutions</span>
+      </div>
+    </div>
+    <div class="cover-nav">
+      <button class="btn-next" onclick="nextSlide()">Begin <span class="arrow">→</span></button>
+    </div>
+  </section>
+
+  <!-- SLIDE 2: THE PROBLEM -->
+  <section class="slide" data-slide="2">
+    <div class="slide-inner">
+      <p class="eyebrow">Why most people give up on AI</p>
+      <h2>Three reasons AI disappoints</h2>
+      <p class="slide-lead">When people try AI and walk away frustrated, it almost always comes down to one of these.</p>
+      <div class="three-col">
+        <div class="card card-num-feature">
+          <div class="big-num">01</div>
+          <h3>Too little context</h3>
+          <p>They gave AI a vague request and got a vague result. The tool isn't the problem — the input is.</p>
+          <div class="card-example">"Write me an email" → Generic template that needs total rewrite</div>
+        </div>
+        <div class="card card-num-feature">
+          <div class="big-num">02</div>
+          <h3>Accepted the first output</h3>
+          <p>They treated AI like a vending machine. One press, take what comes out. AI is a conversation.</p>
+          <div class="card-example">First draft → Final product → Disappointing result</div>
+        </div>
+        <div class="card card-num-feature">
+          <div class="big-num">03</div>
+          <h3>Wrong tool for the task</h3>
+          <p>ChatGPT for real-time research. Free tier for PHI. General model for clinical documentation.</p>
+          <div class="card-example">Right task, wrong tool → Unreliable output</div>
+        </div>
+      </div>
+      <p class="slide-note">This module fixes all three. By the end, you'll have a repeatable framework and 12 real outputs you built yourself.</p>
+    </div>
+  </section>
+
+  <!-- SLIDE 3: THE MENTAL MODEL -->
+  <section class="slide" data-slide="3">
+    <div class="slide-inner centered">
+      <p class="eyebrow">How AI actually works</p>
+      <h2>Just enough theory</h2>
+      <div class="mental-model-box">
+        <div class="mm-left">
+          <div class="mm-icon">🧠</div>
+          <p class="mm-label">AI doesn't "know" things</p>
+          <p class="mm-body">It predicts the most likely next word based on patterns learned from enormous amounts of text.</p>
+        </div>
+        <div class="mm-divider"></div>
+        <div class="mm-right">
+          <p class="mm-label">Think of it as:</p>
+          <div class="autocomplete-demo">
+            <span class="ac-text">Write a prior auth appeal for a patient with </span>
+            <span class="ac-cursor">|</span>
+            <div class="ac-suggestions">
+              <span class="ac-sug ac-sug-1">diabetes denied CGM coverage...</span>
+              <span class="ac-sug ac-sug-2">hypertension appealing medication denial...</span>
+              <span class="ac-sug ac-sug-3">post-surgical rehab denied coverage...</span>
+            </div>
+          </div>
+          <p class="mm-body">The most sophisticated autocomplete ever built — continuing your thought in the most useful direction it can predict.</p>
+        </div>
+      </div>
+      <div class="two-col key-rules">
+        <div class="key-rule">
+          <span class="kr-icon">✓</span>
+          <div><strong>AI is excellent at:</strong> drafting, summarizing, restructuring, explaining, translating tone, generating options</div>
+        </div>
+        <div class="key-rule key-rule-warn">
+          <span class="kr-icon">⚠</span>
+          <div><strong>Verify before using:</strong> specific statistics, regulation numbers, clinical guidelines, named individuals, "current" facts</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 4: THE 5 ELEMENTS -->
+  <section class="slide" data-slide="4">
+    <div class="slide-inner">
+      <p class="eyebrow">The framework</p>
+      <h2>Anatomy of a strong prompt</h2>
+      <p class="slide-lead">Every effective prompt is built from some combination of these five elements.</p>
+      <div class="five-elements">
+        <div class="element el-1">
+          <div class="el-letter">R</div>
+          <div class="el-content">
+            <h4>Role</h4>
+            <p>Who should AI be in this conversation?</p>
+            <div class="el-example">"You are a healthcare compliance officer with 15 years of experience…"</div>
+          </div>
+        </div>
+        <div class="element el-2">
+          <div class="el-letter">T</div>
+          <div class="el-content">
+            <h4>Task</h4>
+            <p>What specific action do you want?</p>
+            <div class="el-example">"Write a 3-paragraph summary…" / "Generate a list of…" / "Review this and flag…"</div>
+          </div>
+        </div>
+        <div class="element el-3">
+          <div class="el-letter">C</div>
+          <div class="el-content">
+            <h4>Context</h4>
+            <p>Background information AI needs to do the task well</p>
+            <div class="el-example">"This is for a 450-bed regional hospital preparing for a Joint Commission audit…"</div>
+          </div>
+        </div>
+        <div class="element el-4">
+          <div class="el-letter">F</div>
+          <div class="el-content">
+            <h4>Format</h4>
+            <p>How should the output be structured?</p>
+            <div class="el-example">"Use bullet points." / "Write as a professional email." / "Organize by priority."</div>
+          </div>
+        </div>
+        <div class="element el-5">
+          <div class="el-letter">C</div>
+          <div class="el-content">
+            <h4>Constraints</h4>
+            <p>What should AI NOT do? What limits apply?</p>
+            <div class="el-example">"Keep it under 200 words." / "Do not include legal advice." / "Avoid jargon."</div>
+          </div>
+        </div>
+      </div>
+      <p class="slide-note">Minimum viable prompt for most tasks: <strong>Task + Context</strong>. Add the others when you need more precision.</p>
+    </div>
+  </section>
+
+  <!-- SLIDE 5: PROMPT LEVELS -->
+  <section class="slide" data-slide="5">
+    <div class="slide-inner">
+      <p class="eyebrow">Prompt quality — live comparison</p>
+      <h2>The same task at four levels</h2>
+      <p class="slide-body">Prior authorization appeal letter. Watch what changes as the prompt gets stronger.</p>
+      <div class="prompt-levels">
+        <div class="prompt-level pl-1">
+          <div class="pl-badge">Level 1</div>
+          <div class="pl-prompt">"Write a prior authorization appeal letter."</div>
+          <div class="pl-result">Generic template. Heavy rewrite needed.</div>
+        </div>
+        <div class="prompt-level pl-2">
+          <div class="pl-badge">Level 2</div>
+          <div class="pl-prompt">"Write a prior auth appeal for a patient denied coverage for a continuous glucose monitor."</div>
+          <div class="pl-result">Better. Still no clinical specifics. Won't win an appeal.</div>
+        </div>
+        <div class="prompt-level pl-3">
+          <div class="pl-badge">Level 3</div>
+          <div class="pl-prompt">"Write a prior auth appeal for a 58-year-old with Type 2 diabetes denied CGM coverage. Denial: 'not medically necessary.' Include: ADA 2024 criteria, 3 ER visits in past 12 months, cost-effectiveness argument. Format as physician letter, under one page."</div>
+          <div class="pl-result">Clinically specific. Ready for physician review with minor edits.</div>
+        </div>
+        <div class="prompt-level pl-4">
+          <div class="pl-badge">Level 4</div>
+          <div class="pl-prompt">"You are a medical appeals specialist. Write a prior auth appeal… [full role + task + context + format + constraints]"</div>
+          <div class="pl-result pl-result-best">Submit-ready with minimal physician review. Structured, credible, specific.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 6: ITERATION -->
+  <section class="slide" data-slide="6">
+    <div class="slide-inner centered">
+      <p class="eyebrow">The biggest mindset shift</p>
+      <h2>AI is a conversation,<br>not a vending machine.</h2>
+      <div class="iteration-flow">
+        <div class="iter-step iter-start">
+          <div class="iter-icon">✍️</div>
+          <p>Write a solid Level 3 prompt</p>
+        </div>
+        <div class="iter-arrow">↓</div>
+        <div class="iter-step">
+          <div class="iter-icon">👁️</div>
+          <p>Read the output critically</p>
+          <p class="iter-sub">What's missing? What's wrong? What's the wrong tone?</p>
+        </div>
+        <div class="iter-arrow">↓</div>
+        <div class="iter-step">
+          <div class="iter-icon">💬</div>
+          <p>Follow up with specific corrections</p>
+          <div class="iter-prompts">
+            <span class="iter-p">"Make it shorter."</span>
+            <span class="iter-p">"The third paragraph is too technical — simplify it."</span>
+            <span class="iter-p">"Give me 3 alternative versions."</span>
+          </div>
+        </div>
+        <div class="iter-arrow">↓</div>
+        <div class="iter-step iter-end">
+          <div class="iter-icon">✅</div>
+          <p>Repeat until it's right</p>
+        </div>
+      </div>
+      <p class="slide-note">The first output is the <strong>starting point</strong>, not the final product. Every great AI output went through at least 2–3 iterations.</p>
+    </div>
+  </section>
+
+  <!-- SLIDE 7: OUTPUT EVALUATION -->
+  <section class="slide" data-slide="7">
+    <div class="slide-inner">
+      <p class="eyebrow">The skill most courses skip</p>
+      <h2>How to know if you can trust the output</h2>
+      <p class="slide-lead">AI output is formatted like truth. That's the problem.</p>
+      <div class="four-review">
+        <div class="review-card">
+          <div class="review-num">01</div>
+          <h4>Is it factually accurate?</h4>
+          <p>For any claim that matters — clinical standards, legal requirements, financial figures — verify against a primary source. Do not assume.</p>
+        </div>
+        <div class="review-card">
+          <div class="review-num">02</div>
+          <h4>Is it complete?</h4>
+          <p>AI often produces outputs that <em>look</em> complete but are missing a critical piece. Did it include the specific clinical criteria? The enforcement section?</p>
+        </div>
+        <div class="review-card">
+          <div class="review-num">03</div>
+          <h4>Is the tone right?</h4>
+          <p>AI defaults to professional-but-generic. Does this need to sound like your organization? Your physician? Your leadership? Adjust it.</p>
+        </div>
+        <div class="review-card">
+          <div class="review-num">04</div>
+          <h4>What didn't you ask for?</h4>
+          <p>AI sometimes adds caveats, disclaimers, or sections you didn't request. Review and remove anything that doesn't belong.</p>
+        </div>
+      </div>
+      <div class="red-flag-box">
+        <span class="rf-label">🚩 Always verify before using when output contains:</span>
+        <div class="rf-tags">
+          <span class="rf-tag">Specific statistics or figures</span>
+          <span class="rf-tag">Regulation names or section numbers</span>
+          <span class="rf-tag">Clinical guidelines</span>
+          <span class="rf-tag">Named individuals or contacts</span>
+          <span class="rf-tag">"Current" or "as of" claims</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 8: TASK 1 -->
+  <section class="slide slide-task" data-slide="8">
+    <div class="slide-inner">
+      <div class="task-header">
+        <div class="task-badge">Task 01</div>
+        <div>
+          <p class="eyebrow">Hands-on practice</p>
+          <h2>The Bad Prompt Fix</h2>
+        </div>
+      </div>
+      <p class="slide-lead">Start with failure. Then fix it.</p>
+      <div class="task-body">
+        <div class="task-step">
+          <div class="ts-num">1</div>
+          <div class="ts-content">
+            <h4>Run this prompt exactly as written</h4>
+            <div class="prompt-box">"Help me with my email."</div>
+            <p>Observe the output. Note what's wrong with it.</p>
+          </div>
+        </div>
+        <div class="task-step">
+          <div class="ts-num">2</div>
+          <div class="ts-content">
+            <h4>Diagnose it using the 5 elements</h4>
+            <p>Which elements are missing? Role? Task? Context? Format? Constraints?</p>
+          </div>
+        </div>
+        <div class="task-step">
+          <div class="ts-num">3</div>
+          <div class="ts-content">
+            <h4>Rewrite the prompt with all 5 elements</h4>
+            <div class="prompt-box prompt-good">"You are a professional business writer. Draft a follow-up email to a hospital department head who attended our AI readiness presentation last week but hasn't responded to our proposal. Tone: warm but confident. Under 150 words. Include a specific call to action: schedule a 30-minute call this week."</div>
+          </div>
+        </div>
+        <div class="task-step">
+          <div class="ts-num">4</div>
+          <div class="ts-content">
+            <h4>Challenge</h4>
+            <p>Ask AI: <em>"Give me three versions of this — formal, conversational, and urgent."</em> Compare all three.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 9: TASK 2 + 3 -->
+  <section class="slide slide-task" data-slide="9">
+    <div class="slide-inner">
+      <p class="eyebrow">Hands-on practice</p>
+      <h2>Tasks 02 &amp; 03 — Document work</h2>
+      <div class="two-col">
+        <div class="task-mini">
+          <div class="task-badge task-badge-sm">Task 02</div>
+          <h3>The Summarizer</h3>
+          <p class="task-context">Healthcare compliance — processing long documents fast</p>
+          <div class="prompt-box">
+"Summarize the following document in 5 bullet points. For each bullet, note whether it requires action from our team. Flag any deadlines.
+
+[Paste a CMS update, policy doc, or regulation]"
+          </div>
+          <div class="task-challenge">
+            <span class="challenge-label">Challenge:</span>
+            "Now write a 3-sentence executive summary I can send to my COO."
+          </div>
+          <div class="tool-tease">
+            <span class="tease-label">Best tool:</span>
+            <span class="tool-tag">Claude</span>
+            <span class="tool-tag">ChatGPT GPT-4o</span>
+          </div>
+        </div>
+        <div class="task-mini">
+          <div class="task-badge task-badge-sm">Task 03</div>
+          <h3>The Job Description Machine</h3>
+          <p class="task-context">Healthcare staffing — generating role-specific content fast</p>
+          <div class="prompt-box">
+"Write a job description for a Certified Nursing Assistant at a long-term care facility in Georgia. Requirements: Georgia CNA certification, BLS, 1+ year experience preferred. Include key duties, physical requirements, culture highlights. Tone: professional but welcoming to new CNAs."
+          </div>
+          <div class="task-challenge">
+            <span class="challenge-label">Challenge:</span>
+            "Rewrite this for a travel CNA — 13-week contract, not permanent hire."
+          </div>
+          <div class="tool-tease">
+            <span class="tease-label">Best tool:</span>
+            <span class="tool-tag">ChatGPT GPT-4o</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 10: TASK 4 + 5 -->
+  <section class="slide slide-task" data-slide="10">
+    <div class="slide-inner">
+      <p class="eyebrow">Hands-on practice</p>
+      <h2>Tasks 04 &amp; 05 — Transform &amp; Translate</h2>
+      <div class="two-col">
+        <div class="task-mini">
+          <div class="task-badge task-badge-sm">Task 04</div>
+          <h3>The Meeting Notes Transformer</h3>
+          <p class="task-context">Universal business — turning rough notes into clean action</p>
+          <div class="prompt-box">
+"Turn these rough meeting notes into a structured summary with: attendees, decisions made, action items with owners and due dates, and open questions needing follow-up.
+
+[Paste your rough notes]"
+          </div>
+          <div class="task-challenge">
+            <span class="challenge-label">Challenge:</span>
+            "Now write the follow-up email I'd send to all attendees."
+          </div>
+        </div>
+        <div class="task-mini">
+          <div class="task-badge task-badge-sm">Task 05</div>
+          <h3>The Plain-Language Converter</h3>
+          <p class="task-context">Healthcare compliance / HR — making policy accessible</p>
+          <div class="prompt-box">
+"Rewrite the following HIPAA minimum necessary standard policy in plain language for a front-desk administrative assistant with no compliance background. Use short sentences. Avoid acronyms unless explained. Add 2 real-world examples of what this means in their daily work.
+
+[Paste policy section]"
+          </div>
+          <div class="task-challenge">
+            <span class="challenge-label">Challenge:</span>
+            "Turn this into 5 quiz questions for a training assessment."
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 11: TASK 6 -->
+  <section class="slide slide-task" data-slide="11">
+    <div class="slide-inner">
+      <div class="task-header">
+        <div class="task-badge">Task 06</div>
+        <div>
+          <p class="eyebrow">Business development</p>
+          <h2>The Proposal Skeleton</h2>
+        </div>
+      </div>
+      <p class="slide-lead">Use AI to structure a complex consulting document in minutes, not days.</p>
+      <div class="prompt-box prompt-full">
+"Create a proposal outline for an AI readiness assessment engagement for a 200-bed regional hospital. The engagement is 8 weeks. Include: executive summary, problem statement, scope of work (4 phases), deliverables, team roles, timeline, and investment range ($15,000–$25,000). Format as a professional consulting proposal outline with section headers and brief descriptions of what each section will contain."
+      </div>
+      <div class="task-steps-row">
+        <div class="tsr-step">
+          <span class="tsr-num">1</span>
+          <p>Run the prompt. Review the structure.</p>
+        </div>
+        <div class="tsr-arrow">→</div>
+        <div class="tsr-step">
+          <span class="tsr-num">2</span>
+          <p>Ask: "Write the executive summary section in full — 3 paragraphs."</p>
+        </div>
+        <div class="tsr-arrow">→</div>
+        <div class="tsr-step">
+          <span class="tsr-num">3</span>
+          <p>Adjust the investment range and scope to match a real client scenario.</p>
+        </div>
+      </div>
+      <div class="task-outcome">
+        <span class="to-label">What you're building:</span>
+        A real, usable consulting proposal skeleton you can take to your next client conversation.
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 12: TASK 7 -->
+  <section class="slide slide-task" data-slide="12">
+    <div class="slide-inner">
+      <div class="task-header">
+        <div class="task-badge">Task 07</div>
+        <div>
+          <p class="eyebrow">Communication prep</p>
+          <h2>The Objection Handler</h2>
+        </div>
+      </div>
+      <p class="slide-lead">Use AI to anticipate resistance — and practice your responses.</p>
+      <div class="two-col">
+        <div>
+          <h3 class="section-h3">Step 1: Generate objections</h3>
+          <div class="prompt-box">
+"I'm presenting an AI adoption proposal to a hospital CFO who is skeptical about ROI and worried about data security. Generate 5 likely objections they will raise, and for each, write a confident, evidence-based response I can use. Keep each response under 100 words."
+          </div>
+        </div>
+        <div>
+          <h3 class="section-h3">Step 2: Role-play the conversation</h3>
+          <div class="prompt-box">
+"Now role-play as the skeptical CFO and push back on my responses. I'll respond and you keep challenging me."
+          </div>
+          <div class="task-note">
+            This is one of the most powerful use cases in the module. AI as a sparring partner — building confidence before the real meeting.
+          </div>
+        </div>
+      </div>
+      <div class="task-outcome">
+        <span class="to-label">Variation:</span>
+        Swap "hospital CFO" for any stakeholder your learners actually face — a compliance officer, a skeptical department head, a budget committee.
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 13: TASK 8 -->
+  <section class="slide slide-task" data-slide="13">
+    <div class="slide-inner">
+      <div class="task-header">
+        <div class="task-badge">Task 08</div>
+        <div>
+          <p class="eyebrow">Research — use the right tool</p>
+          <h2>The Research Brief</h2>
+        </div>
+      </div>
+      <div class="tool-callout">
+        <span class="tc-label">Use this tool:</span>
+        <span class="tc-tool">Perplexity</span>
+        <span class="tc-why">— designed for sourced, real-time research. ChatGPT can hallucinate facts on this type of task.</span>
+      </div>
+      <div class="prompt-box prompt-full">
+"Research the current state of AI adoption in healthcare staffing in the United States as of 2025–2026. Summarize: the top 3 use cases, key vendors in this space, any data on adoption rates or ROI, and one real-world example of a healthcare organization that has implemented AI staffing tools successfully. Cite your sources."
+      </div>
+      <div class="task-steps-row">
+        <div class="tsr-step">
+          <span class="tsr-num">1</span>
+          <p>Run in Perplexity. Review the sources it cites.</p>
+        </div>
+        <div class="tsr-arrow">→</div>
+        <div class="tsr-step">
+          <span class="tsr-num">2</span>
+          <p>Click one source. Does the summary match what the source actually says?</p>
+        </div>
+        <div class="tsr-arrow">→</div>
+        <div class="tsr-step">
+          <span class="tsr-num">3</span>
+          <p>Ask: "Reformat this as 3 slides for a client presentation."</p>
+        </div>
+      </div>
+      <div class="task-outcome">
+        <span class="to-label">Learning goal:</span>
+        Understand the difference between research tools (Perplexity) and generation tools (ChatGPT). Right tool for the task.
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 14: TASK 9 + 10 -->
+  <section class="slide slide-task" data-slide="14">
+    <div class="slide-inner">
+      <p class="eyebrow">Hands-on practice</p>
+      <h2>Tasks 09 &amp; 10 — Operations &amp; Voice</h2>
+      <div class="two-col">
+        <div class="task-mini">
+          <div class="task-badge task-badge-sm">Task 09</div>
+          <h3>The SOP Builder</h3>
+          <p class="task-context">Healthcare operations — capturing process as a structured document</p>
+          <div class="prompt-box">
+"Write an SOP for the prior authorization process at a home health agency. Include: trigger conditions, step-by-step process with responsible party for each step, turnaround time expectations, escalation path if denied, and documentation requirements. Format as a numbered SOP with title, effective date placeholder, and version number."
+          </div>
+          <div class="task-challenge">
+            <span class="challenge-label">Challenge:</span>
+            "Identify 3 steps in this SOP where AI could reduce time or error."
+          </div>
+        </div>
+        <div class="task-mini">
+          <div class="task-badge task-badge-sm">Task 10</div>
+          <h3>The Tone Shifter</h3>
+          <p class="task-context">Universal — serving different audiences with the same content</p>
+          <div class="prompt-box">
+"Rewrite the following paragraph in 3 versions:
+1. Executive-level: formal, concise, focused on ROI and risk
+2. Staff-level: plain language, encouraging, practical
+3. Client-facing: professional, confident, focused on outcomes
+
+[Paste your paragraph]"
+          </div>
+          <div class="task-challenge">
+            <span class="challenge-label">Key insight:</span>
+            Same content, three audiences, zero extra research. That's leverage.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 15: TASK 11 — FACT CHECK -->
+  <section class="slide slide-task" data-slide="15">
+    <div class="slide-inner">
+      <div class="task-header">
+        <div class="task-badge">Task 11</div>
+        <div>
+          <p class="eyebrow">The critical skill</p>
+          <h2>The Fact-Check Exercise</h2>
+        </div>
+      </div>
+      <p class="slide-lead">AI formats everything like truth. Your job is to question it.</p>
+      <div class="factcheck-setup">
+        <div class="fc-step">
+          <div class="fc-num">Setup</div>
+          <p>Teacher Scott will provide a paragraph of AI-generated content about a specific healthcare regulation. <strong>It contains 2–3 planted errors.</strong></p>
+        </div>
+        <div class="fc-step">
+          <div class="fc-num">Your job</div>
+          <p>Read it carefully. Identify anything that seems off. Verify against the primary source.</p>
+        </div>
+      </div>
+      <h3 class="section-h3" style="margin-top: var(--space-4)">What to look for</h3>
+      <div class="three-col">
+        <div class="card">
+          <h4>Wrong regulation numbers</h4>
+          <p>AI confidently cites "45 CFR Part 164" when it should be Part 164.502. The format looks right. The number is wrong.</p>
+        </div>
+        <div class="card">
+          <h4>Outdated figures</h4>
+          <p>HIPAA penalty tiers were updated. AI may cite the old amounts. Looks authoritative. Is wrong.</p>
+        </div>
+        <div class="card">
+          <h4>Plausible clinical claims</h4>
+          <p>A clinical guideline cited correctly by name — but with the wrong recommendation. The most dangerous error type.</p>
+        </div>
+      </div>
+      <div class="facilitator-box">
+        <span class="fac-label">💬 Teaching point:</span>
+        "The more confident it sounds, the more carefully you should verify. Uncertainty-sounding output is easier to catch. It's the polished, authoritative-sounding output that gets people in trouble."
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 16: TASK 12 INTRO -->
+  <section class="slide slide-task slide-capstone" data-slide="16">
+    <div class="slide-inner centered">
+      <div class="capstone-badge">Capstone</div>
+      <p class="eyebrow">Task 12</p>
+      <h2>The Full Workflow</h2>
+      <p class="slide-lead">String everything together. Build a real business development asset — start to finish — using AI as your thought partner throughout.</p>
+      <div class="four-col capstone-steps">
+        <div class="cap-step">
+          <div class="cap-num">1</div>
+          <h4>Client Email</h4>
+          <p>Draft an email introducing your AI readiness assessment service to a prospective healthcare client</p>
+          <span class="cap-skill">Task 1 skills</span>
+        </div>
+        <div class="cap-step">
+          <div class="cap-num">2</div>
+          <h4>Proposal Outline</h4>
+          <p>Build a one-page outline for that engagement with scope, phases, and investment range</p>
+          <span class="cap-skill">Task 6 skills</span>
+        </div>
+        <div class="cap-step">
+          <div class="cap-num">3</div>
+          <h4>Objection Prep</h4>
+          <p>Generate the client's top 3 likely objections and prepare your confident responses</p>
+          <span class="cap-skill">Task 7 skills</span>
+        </div>
+        <div class="cap-step">
+          <div class="cap-num">4</div>
+          <h4>Executive Summary</h4>
+          <p>Summarize the whole package into a 5-bullet brief you could send to a decision-maker</p>
+          <span class="cap-skill">Task 2 skills</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 17: WHAT YOU BUILT -->
+  <section class="slide" data-slide="17">
+    <div class="slide-inner centered">
+      <p class="eyebrow">End of session</p>
+      <h2>What you built today</h2>
+      <p class="slide-lead">You didn't just learn about AI. You used it. Here's what you produced.</p>
+      <div class="output-grid">
+        <div class="output-item"><span class="oi-num">01</span><span>A rewritten, 5-element prompt that actually works</span></div>
+        <div class="output-item"><span class="oi-num">02</span><span>A structured document summary with action flags</span></div>
+        <div class="output-item"><span class="oi-num">03</span><span>A job description — and a travel variant</span></div>
+        <div class="output-item"><span class="oi-num">04</span><span>Clean meeting notes transformed into a send-ready email</span></div>
+        <div class="output-item"><span class="oi-num">05</span><span>A plain-language policy conversion with quiz questions</span></div>
+        <div class="output-item"><span class="oi-num">06</span><span>A consulting proposal skeleton with executive summary</span></div>
+        <div class="output-item"><span class="oi-num">07</span><span>Objection responses + a role-play conversation</span></div>
+        <div class="output-item"><span class="oi-num">08</span><span>A sourced research brief ready for a client presentation</span></div>
+        <div class="output-item"><span class="oi-num">09</span><span>A prior auth SOP with AI insertion points identified</span></div>
+        <div class="output-item"><span class="oi-num">10</span><span>One piece of content rewritten for three audiences</span></div>
+        <div class="output-item"><span class="oi-num">11</span><span>A fact-checked AI paragraph — with errors found</span></div>
+        <div class="output-item output-item-cap"><span class="oi-num">12</span><span>A complete business development package — email, proposal, objections, summary</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 18: CLOSE -->
+  <section class="slide slide-close" data-slide="18">
+    <div class="slide-inner centered">
+      <p class="eyebrow">What comes next</p>
+      <h2>You've done the work.<br>Now make it a habit.</h2>
+      <div class="habit-steps">
+        <div class="habit-step">
+          <div class="hs-icon">📅</div>
+          <h4>This week</h4>
+          <p>Use AI for one task you would normally do manually. Use the 5-element framework. Iterate at least twice.</p>
+        </div>
+        <div class="habit-step">
+          <div class="hs-icon">🔁</div>
+          <h4>Next week</h4>
+          <p>Share what you tried with someone on your team. Show them the before and after. That's how adoption spreads.</p>
+        </div>
+        <div class="habit-step">
+          <div class="hs-icon">🔍</div>
+          <h4>This month</h4>
+          <p>Find one workflow in your org that you could redesign using what you've learned. Map it. That's your Module 3 input.</p>
+        </div>
+      </div>
+      <div class="module-nav-box">
+        <p>Coming in <strong>Module 3:</strong> AI for Your Role — domain-specific tracks for healthcare ops, staffing, compliance, and leadership.</p>
+      </div>
+      <div class="close-tagline">
+        <p><strong>Fluency doesn't come from knowing what AI can do.</strong></p>
+        <p>It comes from doing it — repeatedly, on real work.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="controls">
+  <button class="ctrl-btn" id="prevBtn" onclick="prevSlide()">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+  </button>
+  <div class="dot-nav" id="dotNav"></div>
+  <button class="ctrl-btn" id="nextBtn" onclick="nextSlide()">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+  </button>
+</div>
+
+<button class="fac-toggle" id="facToggle" onclick="toggleFacPanel()">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+</button>
+<div class="fac-panel" id="facPanel">
+  <div class="fac-panel-header">
+    <h3>Facilitator Notes</h3>
+    <button onclick="toggleFacPanel()">✕</button>
+  </div>
+  <div class="fac-panel-body" id="facPanelBody"></div>
+</div>
+
+<div class="kbd-hint">
+  <span class="kbd">←</span><span class="kbd">→</span> navigate &nbsp;|&nbsp; <span class="kbd">F</span> notes
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
